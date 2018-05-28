@@ -22,7 +22,7 @@ Ensure that you have `npm` and `node` installed and that you have a basic Angula
 Also ensure that your app is running at least Angular 6 before continuing.
 
 ### Installing
-Run the following comamnd which should install the `latest` version (`1.0.0-alpha.1-1226f5d`):
+Run the following comamnd which should install the `latest` version (`1.0.0-alpha.1-bc67c72`):
 
 ```bash
 npm install ngx-ytd-api --save
@@ -30,8 +30,16 @@ npm install ngx-ytd-api --save
 
 #### Next
 To get the latest `next` tag, run the following command:
+
 ```bash
 npm install ngx-ytd-api@next --save
+```
+
+#### Snapshot builds
+Alternatively, you can get a snapshot build with the latest changes from `master`. Note that this snapshot build should not be considered stable and may break between releases.
+
+```bash
+npm install --save Chan4077/ngx-ytd-api-builds
 ```
 
 ## Features
