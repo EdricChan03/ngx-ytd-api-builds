@@ -12,9 +12,9 @@ export interface NgxYtdApiGenericResult {
     /**
      * The API's resource type
      */
-    kind: string;
+    kind?: string;
     /**
      * The ETag of the request
      */
-    etag: string;
+    etag?: string;
 }
