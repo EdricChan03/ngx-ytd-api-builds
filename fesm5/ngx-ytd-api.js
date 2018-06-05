@@ -200,7 +200,7 @@ var NgxYtdApiSearchService = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ VERSION = new Version('1.0.0-alpha.1-6f48452');
+var /** @type {?} */ VERSION = new Version('1.0.0-alpha.1-c4a7cd4');
 
 /**
  * @fileoverview added by tsickle
