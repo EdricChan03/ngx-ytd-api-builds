@@ -1,7 +1,7 @@
 {
   "name": "ngx-ytd-api",
   "description": "Unofficial YouTube Data API for Angular",
-  "version": "1.0.0-alpha.2-c53c3f1",
+  "version": "1.0.0-alpha.2-377b746",
   "license": "MIT",
   "keywords": [
     "youtube",
@@ -19,7 +19,7 @@
     "url": "https://github.com/Chan4077"
   },
   "readme": "https://github.com/Chan4077/ngx-ytd-api#readme",
-  "homepage": "https://github.com/Chan4077/ngx-ytd-api#readme",
+  "homepage": "https://ngx-ytd-api.firebaseapp.com",
   "bugs": {
     "url": "https://github.com/Chan4077/ngx-ytd-api",
     "email": "edric.chan.1997@gmail.com"
