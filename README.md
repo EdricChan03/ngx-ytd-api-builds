@@ -10,7 +10,7 @@
 [![Build Status](https://img.shields.io/travis/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://travis-ci.org/Chan4077/ngx-ytd-api)
 [![GitHub contributors](https://img.shields.io/github/contributors/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/graphs/contributors)
 [![ngx-ytd-api license](https://img.shields.io/github/license/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/commits)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/commits) [![Greenkeeper badge](https://badges.greenkeeper.io/Chan4077/ngx-ytd-api.svg)](https://greenkeeper.io/)
 
 
 <!-- [![GitHub latest release](https://img.shields.io/github/release/Chan4077/ngx-ytd-api/all.svg?style=flat-square)][package-url] -->
@@ -27,7 +27,7 @@ Ensure that you have `npm` and `node` installed and that you have a basic Angula
 Also ensure that your app is running at least Angular 6 before continuing.
 
 ### Installing
-Run the following comamnd which should install the `latest` version (`1.0.0-alpha.2-aac1cb2`):
+Run the following comamnd which should install the `latest` version (`1.0.0-alpha.2-d5f7456`):
 
 ```bash
 npm install ngx-ytd-api --save
