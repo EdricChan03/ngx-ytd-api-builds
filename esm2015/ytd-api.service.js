@@ -68,17 +68,10 @@ NgxYtdApiService.decorators = [
 ];
 /** @nocollapse */
 NgxYtdApiService.ctorParameters = () => [
-    { type: HttpClient, },
+    { type: HttpClient }
 ];
 /** @nocollapse */ NgxYtdApiService.ngInjectableDef = i0.defineInjectable({ factory: function NgxYtdApiService_Factory() { return new NgxYtdApiService(i0.inject(i1.HttpClient)); }, token: NgxYtdApiService, providedIn: "root" });
 function NgxYtdApiService_tsickle_Closure_declarations() {
-    /** @type {!Array<{type: !Function, args: (undefined|!Array<?>)}>} */
-    NgxYtdApiService.decorators;
-    /**
-     * @nocollapse
-     * @type {function(): !Array<(null|{type: ?, decorators: (undefined|!Array<{type: !Function, args: (undefined|!Array<?>)}>)})>}
-     */
-    NgxYtdApiService.ctorParameters;
     /**
      * The YouTube base API URL
      * @type {?}

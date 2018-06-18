@@ -89,20 +89,13 @@ var NgxYtdApiSearchService = /** @class */ (function () {
     ];
     /** @nocollapse */
     NgxYtdApiSearchService.ctorParameters = function () { return [
-        { type: HttpClient, },
+        { type: HttpClient }
     ]; };
     /** @nocollapse */ NgxYtdApiSearchService.ngInjectableDef = i0.defineInjectable({ factory: function NgxYtdApiSearchService_Factory() { return new NgxYtdApiSearchService(i0.inject(i1.HttpClient)); }, token: NgxYtdApiSearchService, providedIn: "root" });
     return NgxYtdApiSearchService;
 }());
 export { NgxYtdApiSearchService };
 function NgxYtdApiSearchService_tsickle_Closure_declarations() {
-    /** @type {!Array<{type: !Function, args: (undefined|!Array<?>)}>} */
-    NgxYtdApiSearchService.decorators;
-    /**
-     * @nocollapse
-     * @type {function(): !Array<(null|{type: ?, decorators: (undefined|!Array<{type: !Function, args: (undefined|!Array<?>)}>)})>}
-     */
-    NgxYtdApiSearchService.ctorParameters;
     /**
      * The YouTube base API URL
      * @type {?}
