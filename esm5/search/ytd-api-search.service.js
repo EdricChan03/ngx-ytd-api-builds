@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -62,7 +62,7 @@ var NgxYtdApiSearchService = /** @class */ (function () {
     return NgxYtdApiSearchService;
 }());
 export { NgxYtdApiSearchService };
-function NgxYtdApiSearchService_tsickle_Closure_declarations() {
+if (false) {
     /**
      * The YouTube base API URL
      * @type {?}

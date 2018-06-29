@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -49,7 +49,7 @@ NgxYtdApiService.ctorParameters = () => [
     { type: HttpClient }
 ];
 /** @nocollapse */ NgxYtdApiService.ngInjectableDef = i0.defineInjectable({ factory: function NgxYtdApiService_Factory() { return new NgxYtdApiService(i0.inject(i1.HttpClient)); }, token: NgxYtdApiService, providedIn: "root" });
-function NgxYtdApiService_tsickle_Closure_declarations() {
+if (false) {
     /**
      * The YouTube base API URL
      * @type {?}
