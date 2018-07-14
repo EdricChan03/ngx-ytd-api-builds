@@ -2,16 +2,13 @@
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
-// Interfaces
-// Services
-export { NgxYtdApiService } from './ytd-api.service';
-// Search submodule
-/**
- * @deprecated Use from the `search` submodule instead.
- * @deletion-target 1.0.0-alpha.4
- */
-export { NgxYtdApiSearchService } from './search/public_api';
-// Version
-export { VERSION } from './version';
+export { VERSION } from 'ngx-ytd-api/core';
+/*
+Allow developers to import from `ngx-ytd-api` instead of a submodule.
+Note that this may functionality may be removed in a future release.
+*/
+export { NgxYtdApiCommentService } from 'ngx-ytd-api/comments';
+export { NgxYtdApiSearchService } from 'ngx-ytd-api/search';
+export { NgxYtdApiVideoService } from 'ngx-ytd-api/videos';
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljX2FwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC15dGQtYXBpLyIsInNvdXJjZXMiOlsicHVibGljX2FwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFJQSxpQ0FBYyxtQkFBbUIsQ0FBQzs7Ozs7O0FBT2xDLHVDQUFjLHFCQUFxQixDQUFDOztBQUdwQyx3QkFBYyxXQUFXLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBJbnRlcmZhY2VzXG5leHBvcnQgKiBmcm9tICcuL3l0ZC1hcGkuaW50ZXJmYWNlcyc7XG5cbi8vIFNlcnZpY2VzXG5leHBvcnQgKiBmcm9tICcuL3l0ZC1hcGkuc2VydmljZSc7XG5cbi8vIFNlYXJjaCBzdWJtb2R1bGVcbi8qKlxuICogQGRlcHJlY2F0ZWQgVXNlIGZyb20gdGhlIGBzZWFyY2hgIHN1Ym1vZHVsZSBpbnN0ZWFkLlxuICogQGRlbGV0aW9uLXRhcmdldCAxLjAuMC1hbHBoYS40XG4gKi9cbmV4cG9ydCAqIGZyb20gJy4vc2VhcmNoL3B1YmxpY19hcGknO1xuXG4vLyBWZXJzaW9uXG5leHBvcnQgKiBmcm9tICcuL3ZlcnNpb24nO1xuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljX2FwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC15dGQtYXBpLyIsInNvdXJjZXMiOlsicHVibGljX2FwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsd0JBQWMsa0JBQWtCLENBQUM7Ozs7O0FBTWpDLHdDQUFjLHNCQUFzQixDQUFDO0FBQ3JDLHVDQUFjLG9CQUFvQixDQUFDO0FBQ25DLHNDQUFjLG9CQUFvQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnbmd4LXl0ZC1hcGkvY29yZSc7XG5cbi8qXG5BbGxvdyBkZXZlbG9wZXJzIHRvIGltcG9ydCBmcm9tIGBuZ3gteXRkLWFwaWAgaW5zdGVhZCBvZiBhIHN1Ym1vZHVsZS5cbk5vdGUgdGhhdCB0aGlzIG1heSBmdW5jdGlvbmFsaXR5IG1heSBiZSByZW1vdmVkIGluIGEgZnV0dXJlIHJlbGVhc2UuXG4qL1xuZXhwb3J0ICogZnJvbSAnbmd4LXl0ZC1hcGkvY29tbWVudHMnO1xuZXhwb3J0ICogZnJvbSAnbmd4LXl0ZC1hcGkvc2VhcmNoJztcbmV4cG9ydCAqIGZyb20gJ25neC15dGQtYXBpL3ZpZGVvcyc7XG4iXX0=
