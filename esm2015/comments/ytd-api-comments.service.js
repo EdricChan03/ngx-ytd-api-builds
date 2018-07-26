@@ -48,7 +48,7 @@ export class NgxYtdApiCommentService {
 NgxYtdApiCommentService.decorators = [
     { type: Injectable, args: [{
                 providedIn: 'root'
-            },] },
+            },] }
 ];
 /** @nocollapse */
 NgxYtdApiCommentService.ctorParameters = () => [

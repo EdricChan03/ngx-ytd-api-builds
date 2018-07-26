@@ -54,7 +54,7 @@ var NgxYtdApiCommentService = /** @class */ (function () {
     NgxYtdApiCommentService.decorators = [
         { type: Injectable, args: [{
                     providedIn: 'root'
-                },] },
+                },] }
     ];
     /** @nocollapse */
     NgxYtdApiCommentService.ctorParameters = function () { return [

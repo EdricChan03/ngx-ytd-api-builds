@@ -94,7 +94,7 @@ var NgxYtdApiSearchService = /** @class */ (function () {
     NgxYtdApiSearchService.decorators = [
         { type: Injectable, args: [{
                     providedIn: 'root'
-                },] },
+                },] }
     ];
     /** @nocollapse */
     NgxYtdApiSearchService.ctorParameters = function () { return [

@@ -64,7 +64,7 @@ export class NgxYtdApiSearchService {
 NgxYtdApiSearchService.decorators = [
     { type: Injectable, args: [{
                 providedIn: 'root'
-            },] },
+            },] }
 ];
 /** @nocollapse */
 NgxYtdApiSearchService.ctorParameters = () => [

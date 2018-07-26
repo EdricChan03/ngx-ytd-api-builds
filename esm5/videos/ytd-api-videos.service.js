@@ -50,7 +50,7 @@ var NgxYtdApiVideoService = /** @class */ (function () {
     NgxYtdApiVideoService.decorators = [
         { type: Injectable, args: [{
                     providedIn: 'root'
-                },] },
+                },] }
     ];
     /** @nocollapse */
     NgxYtdApiVideoService.ctorParameters = function () { return [

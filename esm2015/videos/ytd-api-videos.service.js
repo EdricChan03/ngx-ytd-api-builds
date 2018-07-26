@@ -45,7 +45,7 @@ export class NgxYtdApiVideoService {
 NgxYtdApiVideoService.decorators = [
     { type: Injectable, args: [{
                 providedIn: 'root'
-            },] },
+            },] }
 ];
 /** @nocollapse */
 NgxYtdApiVideoService.ctorParameters = () => [
