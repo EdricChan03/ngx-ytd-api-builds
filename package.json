@@ -1,13 +1,14 @@
 {
   "name": "ngx-ytd-api",
   "description": "Unofficial YouTube Data API for Angular",
-  "version": "1.0.0-alpha.3-53cba77",
+  "version": "1.0.0-alpha.3-a550c28",
   "license": "MIT",
   "keywords": [
     "youtube",
     "ytd-api",
     "youtube-data-api",
-    "angular"
+    "angular",
+    "ngx-ytd-api"
   ],
   "repository": {
     "type": "git",
@@ -25,9 +26,9 @@
     "email": "edric.chan.1997@gmail.com"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.9",
-    "@angular/core": "^6.0.9",
-    "rxjs": "^6.2.1"
+    "@angular/common": "^6.1.0",
+    "@angular/core": "^6.1.0",
+    "rxjs": "^6.2.2"
   },
   "dependencies": {
     "tslib": "^1.9.3"
