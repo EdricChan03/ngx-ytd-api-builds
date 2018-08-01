@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('ngx-ytd-api/core'), require('ngx-ytd-api/comments'), require('ngx-ytd-api/search'), require('ngx-ytd-api/videos')) :
 	typeof define === 'function' && define.amd ? define('ngx-ytd-api', ['exports', 'ngx-ytd-api/core', 'ngx-ytd-api/comments', 'ngx-ytd-api/search', 'ngx-ytd-api/videos'], factory) :
-	(factory((global['ngx-ytd-api'] = {}),null,null,null,null));
+	(factory((global['ngx-ytd-api'] = {}),global.core,global.comments,global.search,global.videos));
 }(this, (function (exports,core,comments,search,videos) { 'use strict';
 
 	/**
