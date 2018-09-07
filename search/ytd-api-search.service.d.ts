@@ -16,17 +16,7 @@ export declare class NgxYtdApiSearchService {
      * @param query The query to search for. See the {@link https://developers.google.com/youtube/v3/docs/search/list#q|developer docs}
      * for more info.
      * @param opts Options for searching
-     * @deprecated Use {@link NgxYtdApiSearchService#list} instead.
-     * @deletion-target 1.0.0-alpha.5
      * @returns Results of the search as a stream
      */
-    search(query: string, opts: NgxYtdApiSearchListOpts): Observable<NgxYtdApiSearchListResult>;
-    /**
-     * Searches using the YouTube HTTP Data API
-     * @param query The query to search for. See the {@link https://developers.google.com/youtube/v3/docs/search/list#q|developer docs}
-     * for more info.
-     * @param opts Options for searching
-     * @returns Results of the search as a stream
-     */
-    list(query: string, opts: NgxYtdApiSearchListOpts): Observable<NgxYtdApiSearchListResult>;
+    list(opts: NgxYtdApiSearchListOpts): Observable<NgxYtdApiSearchListResult>;
 }
