@@ -156,9 +156,6 @@ export interface NgxYtdApiVideosListResultItem {
             blocked?: string[];
         };
         contentRating?: {
-            /**
-             * @todo Add better documentation here
-             */
             [key: string]: string | string[];
         };
         projection?: string;
