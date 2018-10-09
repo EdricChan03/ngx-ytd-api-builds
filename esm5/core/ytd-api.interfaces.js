@@ -9,6 +9,23 @@
 export function NgxYtdApiGenericOpts() { }
 if (false) {
     /**
+     * The access token from Google's OAuth 2.0 API
+     * This is to be passed to the `Authorization` HTTP header
+     * @type {?|undefined}
+     */
+    NgxYtdApiGenericOpts.prototype.accessToken;
+    /**
+     * The callback function.
+     * @type {?|undefined}
+     */
+    NgxYtdApiGenericOpts.prototype.callback;
+    /**
+     * Specifies which fields to return
+     * See https://developers.google.com/youtube/v3/getting-started#partial for more info
+     * @type {?|undefined}
+     */
+    NgxYtdApiGenericOpts.prototype.fields;
+    /**
      * The API key for accessing the API
      * @type {?|undefined}
      */
@@ -20,11 +37,24 @@ if (false) {
      */
     NgxYtdApiGenericOpts.prototype.part;
     /**
-     * The access token from Google's OAuth 2.0 API
-     * This is to be passed to the `Authorization` HTTP header
+     * Whether to return the response with line breaks & indentations
      * @type {?|undefined}
      */
-    NgxYtdApiGenericOpts.prototype.accessToken;
+    NgxYtdApiGenericOpts.prototype.prettyPrint;
+    /**
+     * Gives the ability to enforce per-user quotas from a server-side application even
+     * in cases when the user's IP address is unknown.
+     * See https://developers.google.com/youtube/v3/docs/standard_parameters#quotaUser for more info
+     * @type {?|undefined}
+     */
+    NgxYtdApiGenericOpts.prototype.quotaUser;
+    /**
+     * Gives the ability to enforce per-user quotas when calling the API from a server-side
+     * application.
+     * See https://developers.google.com/youtube/v3/docs/standard_parameters#userIp for more info
+     * @type {?|undefined}
+     */
+    NgxYtdApiGenericOpts.prototype.userIp;
 }
 /**
  * @record
@@ -32,14 +62,14 @@ if (false) {
 export function NgxYtdApiGenericResult() { }
 if (false) {
     /**
-     * The API's resource type
-     * @type {?|undefined}
-     */
-    NgxYtdApiGenericResult.prototype.kind;
-    /**
      * The ETag of the request
      * @type {?|undefined}
      */
     NgxYtdApiGenericResult.prototype.etag;
+    /**
+     * The API's resource type
+     * @type {?|undefined}
+     */
+    NgxYtdApiGenericResult.prototype.kind;
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoieXRkLWFwaS5pbnRlcmZhY2VzLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LXl0ZC1hcGkvIiwic291cmNlcyI6WyJjb3JlL3l0ZC1hcGkuaW50ZXJmYWNlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUdBLDBDQWVDOzs7Ozs7SUFYQyxtQ0FBYTs7Ozs7O0lBS2Isb0NBQWM7Ozs7OztJQUtkLDJDQUFxQjs7Ozs7QUFHdkIsNENBU0M7Ozs7OztJQUxDLHNDQUFjOzs7OztJQUlkLHNDQUFjIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBHZW5lcmljIG9wdGlvbnNcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBOZ3hZdGRBcGlHZW5lcmljT3B0cyB7XG4gIC8qKlxuICAgKiBUaGUgQVBJIGtleSBmb3IgYWNjZXNzaW5nIHRoZSBBUElcbiAgICovXG4gIGtleT86IHN0cmluZztcbiAgLyoqXG4gICAqIFBhcnRzIG9mIHRoZSByZXN1bHQgdG8gc2hvd1xuICAgKiBEZWZhdWx0cyB0byBgc25pcHBldCxpZGBcbiAgICovXG4gIHBhcnQ/OiBzdHJpbmc7XG4gIC8qKlxuICAgKiBUaGUgYWNjZXNzIHRva2VuIGZyb20gR29vZ2xlJ3MgT0F1dGggMi4wIEFQSVxuICAgKiBUaGlzIGlzIHRvIGJlIHBhc3NlZCB0byB0aGUgYEF1dGhvcml6YXRpb25gIEhUVFAgaGVhZGVyXG4gICAqL1xuICBhY2Nlc3NUb2tlbj86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBOZ3hZdGRBcGlHZW5lcmljUmVzdWx0IHtcbiAgLyoqXG4gICAqIFRoZSBBUEkncyByZXNvdXJjZSB0eXBlXG4gICAqL1xuICBraW5kPzogc3RyaW5nO1xuICAvKipcbiAgICogVGhlIEVUYWcgb2YgdGhlIHJlcXVlc3RcbiAgICovXG4gIGV0YWc/OiBzdHJpbmc7XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoieXRkLWFwaS5pbnRlcmZhY2VzLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LXl0ZC1hcGkvIiwic291cmNlcyI6WyJjb3JlL3l0ZC1hcGkuaW50ZXJmYWNlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUdBLDBDQXdDQzs7Ozs7OztJQW5DQywyQ0FBcUI7Ozs7O0lBSXJCLHdDQUFrQjs7Ozs7O0lBS2xCLHNDQUFnQjs7Ozs7SUFJaEIsbUNBQWE7Ozs7OztJQUtiLG9DQUFjOzs7OztJQUlkLDJDQUFzQjs7Ozs7OztJQU10Qix5Q0FBbUI7Ozs7Ozs7SUFNbkIsc0NBQWdCOzs7OztBQUdsQiw0Q0FTQzs7Ozs7O0lBTEMsc0NBQWM7Ozs7O0lBSWQsc0NBQWMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEdlbmVyaWMgb3B0aW9uc1xuICovXG5leHBvcnQgaW50ZXJmYWNlIE5neFl0ZEFwaUdlbmVyaWNPcHRzIHtcbiAgLyoqXG4gICAqIFRoZSBhY2Nlc3MgdG9rZW4gZnJvbSBHb29nbGUncyBPQXV0aCAyLjAgQVBJXG4gICAqIFRoaXMgaXMgdG8gYmUgcGFzc2VkIHRvIHRoZSBgQXV0aG9yaXphdGlvbmAgSFRUUCBoZWFkZXJcbiAgICovXG4gIGFjY2Vzc1Rva2VuPzogc3RyaW5nO1xuICAvKipcbiAgICogVGhlIGNhbGxiYWNrIGZ1bmN0aW9uLlxuICAgKi9cbiAgY2FsbGJhY2s/OiBzdHJpbmc7XG4gIC8qKlxuICAgKiBTcGVjaWZpZXMgd2hpY2ggZmllbGRzIHRvIHJldHVyblxuICAgKiBTZWUgaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9nZXR0aW5nLXN0YXJ0ZWQjcGFydGlhbCBmb3IgbW9yZSBpbmZvXG4gICAqL1xuICBmaWVsZHM/OiBzdHJpbmc7XG4gIC8qKlxuICAgKiBUaGUgQVBJIGtleSBmb3IgYWNjZXNzaW5nIHRoZSBBUElcbiAgICovXG4gIGtleT86IHN0cmluZztcbiAgLyoqXG4gICAqIFBhcnRzIG9mIHRoZSByZXN1bHQgdG8gc2hvd1xuICAgKiBEZWZhdWx0cyB0byBgc25pcHBldCxpZGBcbiAgICovXG4gIHBhcnQ/OiBzdHJpbmc7XG4gIC8qKlxuICAgKiBXaGV0aGVyIHRvIHJldHVybiB0aGUgcmVzcG9uc2Ugd2l0aCBsaW5lIGJyZWFrcyAmIGluZGVudGF0aW9uc1xuICAgKi9cbiAgcHJldHR5UHJpbnQ/OiBib29sZWFuO1xuICAvKipcbiAgICogR2l2ZXMgdGhlIGFiaWxpdHkgdG8gZW5mb3JjZSBwZXItdXNlciBxdW90YXMgZnJvbSBhIHNlcnZlci1zaWRlIGFwcGxpY2F0aW9uIGV2ZW5cbiAgICogaW4gY2FzZXMgd2hlbiB0aGUgdXNlcidzIElQIGFkZHJlc3MgaXMgdW5rbm93bi5cbiAgICogU2VlIGh0dHBzOi8vZGV2ZWxvcGVycy5nb29nbGUuY29tL3lvdXR1YmUvdjMvZG9jcy9zdGFuZGFyZF9wYXJhbWV0ZXJzI3F1b3RhVXNlciBmb3IgbW9yZSBpbmZvXG4gICAqL1xuICBxdW90YVVzZXI/OiBzdHJpbmc7XG4gIC8qKlxuICAgKiBHaXZlcyB0aGUgYWJpbGl0eSB0byBlbmZvcmNlIHBlci11c2VyIHF1b3RhcyB3aGVuIGNhbGxpbmcgdGhlIEFQSSBmcm9tIGEgc2VydmVyLXNpZGVcbiAgICogYXBwbGljYXRpb24uXG4gICAqIFNlZSBodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3Mvc3RhbmRhcmRfcGFyYW1ldGVycyN1c2VySXAgZm9yIG1vcmUgaW5mb1xuICAgKi9cbiAgdXNlcklwPzogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIE5neFl0ZEFwaUdlbmVyaWNSZXN1bHQge1xuICAvKipcbiAgICogVGhlIEVUYWcgb2YgdGhlIHJlcXVlc3RcbiAgICovXG4gIGV0YWc/OiBzdHJpbmc7XG4gIC8qKlxuICAgKiBUaGUgQVBJJ3MgcmVzb3VyY2UgdHlwZVxuICAgKi9cbiAga2luZD86IHN0cmluZztcbn1cbiJdfQ==
