@@ -1,4 +1,4 @@
-import { NgxYtdApiGenericOpts, NgxYtdApiGenericResult } from 'ngx-ytd-api/core';
+import { NgxYtdApiGenericOpts, NgxYtdApiGenericResource } from 'ngx-ytd-api/core';
 export interface NgxYtdApiSearchListOpts extends NgxYtdApiGenericOpts {
     /**
      * The channel ID to search videos from
@@ -138,10 +138,10 @@ export interface NgxYtdApiSearchListOpts extends NgxYtdApiGenericOpts {
      */
     videoType?: 'any' | 'episode' | 'movie';
 }
-export interface NgxYtdApiSearchListResultItemThumbnails {
-    [key: string]: NgxYtdApiSearchListResultItemThumbnail;
+export interface NgxYtdApiSearchResourceThumbnails {
+    [key: string]: NgxYtdApiSearchResourceThumbnail;
 }
-export interface NgxYtdApiSearchListResultItemThumbnail {
+export interface NgxYtdApiSearchResourceThumbnail {
     /**
      * The URL of the thumbnail
      */
@@ -155,7 +155,17 @@ export interface NgxYtdApiSearchListResultItemThumbnail {
      */
     height?: number;
 }
-export interface NgxYtdApiSearchListResultItem extends NgxYtdApiGenericResult {
+/**
+ * @deprecated Use {@link NgxYtdApiSearchResourceThumbnail} instead
+ */
+export interface NgxYtdApiSearchListResultItemThumbnail extends NgxYtdApiSearchResourceThumbnail {
+}
+/**
+ * @deprecated Use {@link NgxYtdApiSearchResourceThumbnails} instead
+ */
+export interface NgxYtdApiSearchListResultItemThumbnails extends NgxYtdApiSearchResourceThumbnails {
+}
+export interface NgxYtdApiSearchResource extends NgxYtdApiGenericResource {
     /**
      * The id object contains info which can be used for uniquely identifing the resource
      * See the [documentation]{@link https://developers.google.com/youtube/v3/docs/search#id} for more info
@@ -192,7 +202,7 @@ export interface NgxYtdApiSearchListResultItem extends NgxYtdApiGenericResult {
         /**
          * An object of the thumbnails
          */
-        thumbnails?: NgxYtdApiSearchListResultItemThumbnails;
+        thumbnails?: NgxYtdApiSearchResourceThumbnails;
         /**
          * The title of the channel that published the resource
          */
@@ -203,7 +213,12 @@ export interface NgxYtdApiSearchListResultItem extends NgxYtdApiGenericResult {
         liveBroadcastContent?: 'upcoming' | 'live' | 'none';
     };
 }
-export interface NgxYtdApiSearchListResult extends NgxYtdApiGenericResult {
+/**
+ * @deprecated Use {@link NgxYtdApiSearchResource} instead
+ */
+export interface NgxYtdApiSearchListResultItem extends NgxYtdApiSearchResource {
+}
+export interface NgxYtdApiSearchListResult extends NgxYtdApiGenericResource {
     /**
      * The token that can be used as the value of the `pageToken` parameter to retrieve the next page in the result set.
      */
@@ -232,5 +247,5 @@ export interface NgxYtdApiSearchListResult extends NgxYtdApiGenericResult {
     /**
      * An array of results that match the criteria
      */
-    items?: NgxYtdApiSearchListResultItem[];
+    items?: NgxYtdApiSearchResource[];
 }

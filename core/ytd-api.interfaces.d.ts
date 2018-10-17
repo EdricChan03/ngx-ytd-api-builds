@@ -42,7 +42,7 @@ export interface NgxYtdApiGenericOpts {
      */
     userIp?: string;
 }
-export interface NgxYtdApiGenericResult {
+export interface NgxYtdApiGenericResource {
     /**
      * The ETag of the request
      */
@@ -51,4 +51,9 @@ export interface NgxYtdApiGenericResult {
      * The API's resource type
      */
     kind?: string;
+}
+/**
+ * @deprecated Use {@link NgxYtdApiGenericResource} instead
+ */
+export interface NgxYtdApiGenericResult extends NgxYtdApiGenericResource {
 }
