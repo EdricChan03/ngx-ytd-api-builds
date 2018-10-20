@@ -1,7 +1,7 @@
-export { VERSION } from 'ngx-ytd-api/core';
-export { NgxYtdApiCommentService } from 'ngx-ytd-api/comments';
-export { NgxYtdApiSearchService } from 'ngx-ytd-api/search';
-export { NgxYtdApiVideoService } from 'ngx-ytd-api/videos';
+export { NgxYtdApiCoreModule, NgxYtdApiCoreService, VERSION } from 'ngx-ytd-api/core';
+export { NgxYtdApiCommentService, NgxYtdApiCommentsModule } from 'ngx-ytd-api/comments';
+export { NgxYtdApiSearchService, NgxYtdApiSearchModule } from 'ngx-ytd-api/search';
+export { NgxYtdApiVideosService, NgxYtdApiVideosModule } from 'ngx-ytd-api/videos';
 
 /**
  * @fileoverview added by tsickle

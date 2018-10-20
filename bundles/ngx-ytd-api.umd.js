@@ -14,13 +14,18 @@
 	 * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
 	 */
 
+	exports.NgxYtdApiCoreModule = core.NgxYtdApiCoreModule;
+	exports.NgxYtdApiCoreService = core.NgxYtdApiCoreService;
 	exports.VERSION = core.VERSION;
 	exports.NgxYtdApiCommentService = comments.NgxYtdApiCommentService;
+	exports.NgxYtdApiCommentsModule = comments.NgxYtdApiCommentsModule;
 	exports.NgxYtdApiSearchService = search.NgxYtdApiSearchService;
-	exports.NgxYtdApiVideoService = videos.NgxYtdApiVideoService;
+	exports.NgxYtdApiSearchModule = search.NgxYtdApiSearchModule;
+	exports.NgxYtdApiVideosService = videos.NgxYtdApiVideosService;
+	exports.NgxYtdApiVideosModule = videos.NgxYtdApiVideosModule;
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LXl0ZC1hcGkudW1kLmpzLm1hcCIsInNvdXJjZXMiOltdLCJzb3VyY2VzQ29udGVudCI6W10sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LXl0ZC1hcGkudW1kLmpzLm1hcCIsInNvdXJjZXMiOltdLCJzb3VyY2VzQ29udGVudCI6W10sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
