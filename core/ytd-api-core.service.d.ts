@@ -19,5 +19,5 @@ export declare class NgxYtdApiCoreService {
      * Generates the query parameters to be used with the API endpoint
      * @return A `HttpClient` instance
      */
-    _generateApiRequest<R, P extends any>(apiEndpoint: string, apiParams: P): Observable<R>;
+    createHttpGet<R, P extends any>(apiEndpoint: string, apiParams: P): Observable<R>;
 }
