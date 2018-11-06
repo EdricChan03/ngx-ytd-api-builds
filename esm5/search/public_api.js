@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
  */
 export {} from './ytd-api-search.interfaces';
 export { NgxYtdApiSearchService } from './ytd-api-search.service';

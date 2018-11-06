@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
  */
 export {} from './ytd-api-comments.interface';
 export { NgxYtdApiCommentService } from './ytd-api-comments.service';
