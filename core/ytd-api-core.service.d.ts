@@ -16,6 +16,10 @@ export declare class NgxYtdApiCoreService {
      */
     readonly ngxYtdVideosApiUrl = "https://www.googleapis.com/youtube/v3/videos";
     /**
+     * The API URL for the Videos API for uploading a video of the YouTube Data v3 API
+     */
+    readonly ngxYtdVideoUploadsApiUrl = "https://www.googleapis.com/upload/youtube/v3/videos";
+    /**
      * Generates the query parameters to be used for a HTTP DELETE request
      * @param apiEndpoint The API endpoint
      * @param apiParams Parameters to be appended to the API endpoint
@@ -36,7 +40,7 @@ export declare class NgxYtdApiCoreService {
      * @param apiBody The request body
      * @return A `HttpClient` instance
      */
-    createHttpPost<R, P extends any>(apiEndpoint: string, apiParams: P, apiBody: any): Observable<R>;
+    createHttpPost<P extends any, B extends any | null>(apiEndpoint: string, apiParams: P, apiBody?: B): Observable<any>;
     /**
      * Generates the query parameters to be used with the API endpoint
      * @param apiEndpoint The API endpoint
@@ -44,5 +48,5 @@ export declare class NgxYtdApiCoreService {
      * @param apiBody The request body
      * @return A `HttpClient` instance
      */
-    createHttpPut<R, P extends any>(apiEndpoint: string, apiParams: P, apiBody: any): Observable<R>;
+    createHttpPut<R, P extends any, B extends any>(apiEndpoint: string, apiParams: P, apiBody: B): Observable<R>;
 }
