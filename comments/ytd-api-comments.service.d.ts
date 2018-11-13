@@ -1,7 +1,7 @@
+import { NgxYtdApiCoreService } from 'ngx-ytd-api/core';
 import { Observable } from 'rxjs';
 import { NgxYtdApiCommentListOpts, NgxYtdApiCommentListResult } from './ytd-api-comments.interface';
-import { NgxYtdApiCoreService } from 'ngx-ytd-api/core';
-export declare class NgxYtdApiCommentService {
+export declare class NgxYtdApiCommentsService {
     private core;
     constructor(core: NgxYtdApiCoreService);
     /**

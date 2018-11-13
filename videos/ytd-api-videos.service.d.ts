@@ -1,6 +1,6 @@
-import { NgxYtdApiVideosDeleteOpts, NgxYtdApiVideosGetRatingOpts, NgxYtdApiVideosGetRatingResult, NgxYtdApiVideosInsertOpts, NgxYtdApiVideosListOpts, NgxYtdApiVideosListResult, NgxYtdApiVideosRateOpts, NgxYtdApiVideosReportAbuseBody, NgxYtdApiVideosReportAbuseOpts, NgxYtdApiVideosResource, NgxYtdApiVideosUpdateOpts } from './ytd-api-videos.interface';
-import { Observable } from 'rxjs';
 import { NgxYtdApiCoreService } from 'ngx-ytd-api/core';
+import { Observable } from 'rxjs';
+import { NgxYtdApiVideosDeleteOpts, NgxYtdApiVideosGetRatingOpts, NgxYtdApiVideosGetRatingResult, NgxYtdApiVideosInsertOpts, NgxYtdApiVideosListOpts, NgxYtdApiVideosListResult, NgxYtdApiVideosRateOpts, NgxYtdApiVideosReportAbuseBody, NgxYtdApiVideosReportAbuseOpts, NgxYtdApiVideosResource, NgxYtdApiVideosUpdateOpts } from './ytd-api-videos.interface';
 export declare class NgxYtdApiVideosService {
     private core;
     constructor(core: NgxYtdApiCoreService);
