@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/ngx-ytd-api-search.umd.js",
+  "module": "../fesm5/ngx-ytd-api-search.js",
+  "es2015": "../fesm2015/ngx-ytd-api-search.js",
+  "esm5": "../esm5/search/ngx-ytd-api-search.js",
+  "esm2015": "../esm2015/search/ngx-ytd-api-search.js",
+  "fesm5": "../fesm5/ngx-ytd-api-search.js",
+  "fesm2015": "../fesm2015/ngx-ytd-api-search.js",
+  "typings": "ngx-ytd-api-search.d.ts",
+  "metadata": "ngx-ytd-api-search.metadata.json",
+  "sideEffects": false,
+  "name": "ngx-ytd-api/search"
+}

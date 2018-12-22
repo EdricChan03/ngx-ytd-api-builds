@@ -1,9 +1,14 @@
 import { Observable } from 'rxjs';
 import { NgxYtdApiSearchListOpts, NgxYtdApiSearchListResult } from './ytd-api-search.interfaces';
-import { NgxYtdApiCoreService } from 'ngx-ytd-api/core';
+import { SimpleHttpService } from 'ngx-simple-http';
 export declare class NgxYtdApiSearchService {
-    private core;
-    constructor(core: NgxYtdApiCoreService);
+    private http;
+    constructor(http: SimpleHttpService);
+    /**
+     * The API URL for the Search API of the YouTube Data v3 API
+     */
+    readonly ngxYtdSearchApiUrl = "https://www.googleapis.com/youtube/v3/search";
+    private _httpHandler;
     /**
      * Returns a collection of search results that match the query parameters specified
      *

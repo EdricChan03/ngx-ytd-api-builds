@@ -1,1 +1,1 @@
-{"version":3,"file":"ngx-ytd-api.js.map","sources":[],"sourcesContent":[],"names":[],"mappings":";;;;;;;;;;;;;"}
+{"version":3,"file":"ngx-ytd-api.js.map","sources":["ng://ngx-ytd-api/version.ts"],"sourcesContent":["import { Version } from '@angular/core';\n\nexport const VERSION = new Version('1.0.0-alpha.3-e43cc3b-e43cc3b');\n"],"names":[],"mappings":";;;;;;;;;AAAA;AAEA,MAAa,OAAO,GAAG,IAAI,OAAO,CAAC,uBAAuB,CAAC;;;;;;;;;;;;;;;;;;;"}

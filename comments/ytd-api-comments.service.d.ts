@@ -1,9 +1,14 @@
-import { NgxYtdApiCoreService } from 'ngx-ytd-api/core';
+import { SimpleHttpService } from 'ngx-simple-http';
 import { Observable } from 'rxjs';
 import { NgxYtdApiCommentsDeleteOpts, NgxYtdApiCommentsInsertOpts, NgxYtdApiCommentsListOpts, NgxYtdApiCommentsListResult, NgxYtdApiCommentsMarkAsSpamOpts, NgxYtdApiCommentsResource, NgxYtdApiCommentsSetModerationStatusOpts, NgxYtdApiCommentsUpdateOpts } from './ytd-api-comments.interface';
 export declare class NgxYtdApiCommentsService {
-    private core;
-    constructor(core: NgxYtdApiCoreService);
+    private http;
+    constructor(http: SimpleHttpService);
+    /**
+     * The API URL for the Comments API of the YouTube Data v3 API
+     */
+    readonly ngxYtdCommentsApiUrl = "https://www.googleapis.com/youtube/v3/comments";
+    private _httpHandler;
     /**
      * Deletes a comment
      *
@@ -26,7 +31,7 @@ export declare class NgxYtdApiCommentsService {
      *
      * See https://developers.google.com/youtube/v3/docs/comments/list for more info
      * @param opts Options for the API
-     * @return Results of the search as an `Observable`
+     * @return Results of the request as an `Observable`
      */
     list(opts: NgxYtdApiCommentsListOpts): Observable<NgxYtdApiCommentsListResult>;
     /**
@@ -34,7 +39,7 @@ export declare class NgxYtdApiCommentsService {
      *
      * See https://developers.google.com/youtube/v3/docs/comments/markAsSpam for more info
      * @param opts Options for the API
-     * @return Results of the search as an `Observable`
+     * @return Results of the request as an `Observable`
      */
     markAsSpam(opts: NgxYtdApiCommentsMarkAsSpamOpts): Observable<any>;
     /**
@@ -42,7 +47,7 @@ export declare class NgxYtdApiCommentsService {
      *
      * See https://developers.google.com/youtube/v3/docs/comments/setModerationStatus for more info
      * @param opts Options for the API
-     * @return Results of the search as an `Observable`
+     * @return Results of the request as an `Observable`
      */
     setModerationStatus(opts: NgxYtdApiCommentsSetModerationStatusOpts): Observable<any>;
     /**

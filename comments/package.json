@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/ngx-ytd-api-comments.umd.js",
+  "module": "../fesm5/ngx-ytd-api-comments.js",
+  "es2015": "../fesm2015/ngx-ytd-api-comments.js",
+  "esm5": "../esm5/comments/ngx-ytd-api-comments.js",
+  "esm2015": "../esm2015/comments/ngx-ytd-api-comments.js",
+  "fesm5": "../fesm5/ngx-ytd-api-comments.js",
+  "fesm2015": "../fesm2015/ngx-ytd-api-comments.js",
+  "typings": "ngx-ytd-api-comments.d.ts",
+  "metadata": "ngx-ytd-api-comments.metadata.json",
+  "sideEffects": false,
+  "name": "ngx-ytd-api/comments"
+}

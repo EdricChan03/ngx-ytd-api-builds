@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/ngx-ytd-api-videos.umd.js",
+  "module": "../fesm5/ngx-ytd-api-videos.js",
+  "es2015": "../fesm2015/ngx-ytd-api-videos.js",
+  "esm5": "../esm5/videos/ngx-ytd-api-videos.js",
+  "esm2015": "../esm2015/videos/ngx-ytd-api-videos.js",
+  "fesm5": "../fesm5/ngx-ytd-api-videos.js",
+  "fesm2015": "../fesm2015/ngx-ytd-api-videos.js",
+  "typings": "ngx-ytd-api-videos.d.ts",
+  "metadata": "ngx-ytd-api-videos.metadata.json",
+  "sideEffects": false,
+  "name": "ngx-ytd-api/videos"
+}
