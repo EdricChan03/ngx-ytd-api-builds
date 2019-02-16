@@ -29,15 +29,15 @@ Also ensure that your app is running at least Angular 6 before continuing.
 
 ### Installing
 
-Run the following comamnd which should install the `latest` version (`1.0.0-alpha.4-92bf7cb`):
+Run the following comamnd which should install the `latest` version (`1.0.0-alpha.4-8a21f53`):
 
 ```bash
 npm install ngx-ytd-api --save
 ```
 
-#### `1.0.0-alpha.4-92bf7cb` and up
+#### `1.0.0-alpha.4-8a21f53` and up
 
-Versions `1.0.0-alpha.4-92bf7cb` now require the `ngx-simple-http` dependency. Install it as well:
+Versions `1.0.0-alpha.4-8a21f53` now require the `ngx-simple-http` dependency. Install it as well:
 
 ```bash
 npm install ngx-simple-http --save
