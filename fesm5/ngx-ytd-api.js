@@ -8,7 +8,7 @@ import { Version } from '@angular/core';
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-var VERSION = new Version('1.0.0-alpha.4-8a21f53-8a21f53');
+var VERSION = new Version('1.0.0-alpha.4-4d36116-4d36116');
 
 /**
  * @fileoverview added by tsickle
