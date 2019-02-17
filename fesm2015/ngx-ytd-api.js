@@ -1,4 +1,5 @@
 export { NgxYtdApiCommentsModule, NgxYtdApiCommentsService } from 'ngx-ytd-api/comments';
+import 'ngx-ytd-api/common';
 export { NgxYtdApiSearchModule, NgxYtdApiSearchService } from 'ngx-ytd-api/search';
 export { NgxYtdApiVideosService, NgxYtdApiVideosModule } from 'ngx-ytd-api/videos';
 import { Version } from '@angular/core';
@@ -8,12 +9,7 @@ import { Version } from '@angular/core';
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const VERSION = new Version('1.0.0-alpha.4-275e388-275e388');
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+const VERSION = new Version('1.0.0-alpha.4-21d6bf5-21d6bf5');
 
 /**
  * @fileoverview added by tsickle

@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/ngx-ytd-api-common.umd.js",
+  "module": "../fesm5/ngx-ytd-api-common.js",
+  "es2015": "../fesm2015/ngx-ytd-api-common.js",
+  "esm5": "../esm5/common/ngx-ytd-api-common.js",
+  "esm2015": "../esm2015/common/ngx-ytd-api-common.js",
+  "fesm5": "../fesm5/ngx-ytd-api-common.js",
+  "fesm2015": "../fesm2015/ngx-ytd-api-common.js",
+  "typings": "ngx-ytd-api-common.d.ts",
+  "metadata": "ngx-ytd-api-common.metadata.json",
+  "sideEffects": false,
+  "name": "ngx-ytd-api/common"
+}

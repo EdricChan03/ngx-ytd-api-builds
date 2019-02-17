@@ -1,4 +1,4 @@
-import { NgxYtdApiGenericOpts, NgxYtdApiGenericResource, NgxYtdApiStandardOpts } from './ytd-api-common.interface';
+import { NgxYtdApiGenericOpts, NgxYtdApiGenericResource, NgxYtdApiStandardOpts } from 'ngx-ytd-api/common';
 export interface NgxYtdApiCommentsResource extends NgxYtdApiGenericResource {
     /**
      * The ID that YouTube uses to uniquely identify the comment.

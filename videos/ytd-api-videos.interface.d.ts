@@ -1,4 +1,4 @@
-import { NgxYtdApiGenericOpts, NgxYtdApiGenericResource, NgxYtdApiStandardOpts } from './ytd-api-common.interface';
+import { NgxYtdApiGenericOpts, NgxYtdApiGenericResource, NgxYtdApiStandardOpts } from 'ngx-ytd-api/common';
 export interface NgxYtdApiVideosResourceSuggestionTagSuggestion {
     /**
      * The keyword tag suggested for the video
