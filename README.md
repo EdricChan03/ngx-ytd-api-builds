@@ -13,8 +13,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/graphs/contributors)
 [![ngx-ytd-api license](https://img.shields.io/github/license/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://github.com/Chan4077/ngx-ytd-api/commits)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Chan4077/ngx-ytd-api.svg?style=flat-square)](https://greenkeeper.io/)
-
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Chan4077/ngx-ytd-api)](https://dependabot.com)
 <!-- END Badges -->
 
 </div>
@@ -29,7 +28,7 @@ Also ensure that your app is running at least Angular 6 before continuing.
 
 ### Installing
 
-Run the following comamnd which should install the `latest` version (`1.0.0-alpha.4-9e6df05`):
+Run the following comamnd which should install the `latest` version (`1.0.0-alpha.4-eb0bcd7`):
 
 ```bash
 npm install ngx-ytd-api --save
