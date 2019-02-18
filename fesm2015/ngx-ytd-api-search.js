@@ -1,6 +1,5 @@
 import { Injectable, NgModule } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
-import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
+import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
 /**
  * @fileoverview added by tsickle
@@ -13,82 +12,14 @@ import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
  */
 class NgxYtdApiSearchService {
     /**
-     * @param {?} http
+     * @param {?} common
      */
-    constructor(http) {
-        this.http = http;
+    constructor(common) {
+        this.common = common;
         /**
          * The API URL for the Search API of the YouTube Data v3 API
          */
         this.ngxYtdSearchApiUrl = 'https://www.googleapis.com/youtube/v3/search';
-    }
-    // Handler for HTTP requests
-    /**
-     * @private
-     * @template B, P, R
-     * @param {?} apiEndpoint
-     * @param {?} opts
-     * @param {?=} body
-     * @param {?=} httpType
-     * @return {?}
-     */
-    _httpHandler(apiEndpoint, opts, body = null, httpType) {
-        /** @type {?} */
-        let headers;
-        if ('accessToken' in opts && typeof opts['accessToken'] !== undefined && opts['accessToken'] !== null) {
-            headers = new HttpHeaders()
-                .set('Authorization', `Bearer ${opts['accessToken']}`);
-        }
-        switch (httpType) {
-            case 'delete':
-                if (headers) {
-                    return this.http.createHttpDelete(apiEndpoint, opts, headers);
-                }
-                else {
-                    return this.http.createHttpDelete(apiEndpoint, opts);
-                }
-            case 'get':
-                if (headers) {
-                    return this.http.createHttpGet(apiEndpoint, opts, headers);
-                }
-                else {
-                    return this.http.createHttpGet(apiEndpoint, opts);
-                }
-            case 'post':
-                if (headers) {
-                    if (body) {
-                        return this.http.createHttpPost(apiEndpoint, opts, body, headers);
-                    }
-                    else {
-                        return this.http.createHttpPost(apiEndpoint, opts, null, headers);
-                    }
-                }
-                else {
-                    if (body) {
-                        return this.http.createHttpPost(apiEndpoint, opts, body);
-                    }
-                    else {
-                        return this.http.createHttpPost(apiEndpoint, opts, null);
-                    }
-                }
-            case 'put':
-                if (headers) {
-                    if (body) {
-                        return this.http.createHttpPut(apiEndpoint, opts, body, headers);
-                    }
-                    else {
-                        return this.http.createHttpPut(apiEndpoint, opts, null, headers);
-                    }
-                }
-                else {
-                    if (body) {
-                        return this.http.createHttpPut(apiEndpoint, opts, body);
-                    }
-                    else {
-                        return this.http.createHttpPut(apiEndpoint, opts, null);
-                    }
-                }
-        }
     }
     /**
      * Returns a collection of search results that match the query parameters specified
@@ -98,7 +29,7 @@ class NgxYtdApiSearchService {
      * @return {?} Results of the search has an `Observable`
      */
     list(opts) {
-        return this._httpHandler(this.ngxYtdSearchApiUrl, opts, null, 'get');
+        return this.common.sendHttpRequest(this.ngxYtdSearchApiUrl, this.common.mergeOpts(opts), null, 'get');
     }
 }
 NgxYtdApiSearchService.decorators = [
@@ -106,7 +37,7 @@ NgxYtdApiSearchService.decorators = [
 ];
 /** @nocollapse */
 NgxYtdApiSearchService.ctorParameters = () => [
-    { type: SimpleHttpService }
+    { type: NgxYtdApiCommonService }
 ];
 
 /**
@@ -118,7 +49,7 @@ class NgxYtdApiSearchModule {
 NgxYtdApiSearchModule.decorators = [
     { type: NgModule, args: [{
                 imports: [
-                    SimpleHttpModule
+                    NgxYtdApiCommonModule
                 ],
                 providers: [
                     NgxYtdApiSearchService

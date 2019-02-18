@@ -1,5 +1,5 @@
 export { NgxYtdApiCommentsModule, NgxYtdApiCommentsService } from 'ngx-ytd-api/comments';
-import 'ngx-ytd-api/common';
+export { NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NgxYtdApiCommonModule, NgxYtdApiCommonService } from 'ngx-ytd-api/common';
 export { NgxYtdApiSearchModule, NgxYtdApiSearchService } from 'ngx-ytd-api/search';
 export { NgxYtdApiVideosService, NgxYtdApiVideosModule } from 'ngx-ytd-api/videos';
 import { Version } from '@angular/core';
@@ -9,7 +9,7 @@ import { Version } from '@angular/core';
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-var VERSION = new Version('1.0.0-alpha.4-e0d555c-e0d555c');
+var VERSION = new Version('1.0.0-alpha.4-9556499-9556499');
 
 /**
  * @fileoverview added by tsickle

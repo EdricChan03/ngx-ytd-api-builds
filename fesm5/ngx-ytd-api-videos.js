@@ -1,6 +1,5 @@
-import { HttpHeaders } from '@angular/common/http';
-import { Injectable, NgModule, defineInjectable, inject } from '@angular/core';
-import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
+import { Injectable, NgModule } from '@angular/core';
+import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
 /**
  * @fileoverview added by tsickle
@@ -12,8 +11,8 @@ import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var NgxYtdApiVideosService = /** @class */ (function () {
-    function NgxYtdApiVideosService(http) {
-        this.http = http;
+    function NgxYtdApiVideosService(common) {
+        this.common = common;
         /**
          * The API URL for the Videos API of the YouTube Data v3 API
          */
@@ -23,87 +22,6 @@ var NgxYtdApiVideosService = /** @class */ (function () {
          */
         this.ngxYtdVideoUploadsApiUrl = 'https://www.googleapis.com/upload/youtube/v3/videos';
     }
-    // Handler for HTTP requests
-    // Handler for HTTP requests
-    /**
-     * @private
-     * @template B, P, R
-     * @param {?} apiEndpoint
-     * @param {?} opts
-     * @param {?=} body
-     * @param {?=} httpType
-     * @return {?}
-     */
-    NgxYtdApiVideosService.prototype._httpHandler = 
-    // Handler for HTTP requests
-    /**
-     * @private
-     * @template B, P, R
-     * @param {?} apiEndpoint
-     * @param {?} opts
-     * @param {?=} body
-     * @param {?=} httpType
-     * @return {?}
-     */
-    function (apiEndpoint, opts, body, httpType) {
-        if (body === void 0) { body = null; }
-        /** @type {?} */
-        var headers;
-        if ('accessToken' in opts && typeof opts['accessToken'] !== undefined && opts['accessToken'] !== null) {
-            headers = new HttpHeaders()
-                .set('Authorization', "Bearer " + opts['accessToken']);
-        }
-        switch (httpType) {
-            case 'delete':
-                if (headers) {
-                    return this.http.createHttpDelete(apiEndpoint, opts, headers);
-                }
-                else {
-                    return this.http.createHttpDelete(apiEndpoint, opts);
-                }
-            case 'get':
-                if (headers) {
-                    return this.http.createHttpGet(apiEndpoint, opts, headers);
-                }
-                else {
-                    return this.http.createHttpGet(apiEndpoint, opts);
-                }
-            case 'post':
-                if (headers) {
-                    if (body) {
-                        return this.http.createHttpPost(apiEndpoint, opts, body, headers);
-                    }
-                    else {
-                        return this.http.createHttpPost(apiEndpoint, opts, null, headers);
-                    }
-                }
-                else {
-                    if (body) {
-                        return this.http.createHttpPost(apiEndpoint, opts, body);
-                    }
-                    else {
-                        return this.http.createHttpPost(apiEndpoint, opts, null);
-                    }
-                }
-            case 'put':
-                if (headers) {
-                    if (body) {
-                        return this.http.createHttpPut(apiEndpoint, opts, body, headers);
-                    }
-                    else {
-                        return this.http.createHttpPut(apiEndpoint, opts, null, headers);
-                    }
-                }
-                else {
-                    if (body) {
-                        return this.http.createHttpPut(apiEndpoint, opts, body);
-                    }
-                    else {
-                        return this.http.createHttpPut(apiEndpoint, opts, null);
-                    }
-                }
-        }
-    };
     /**
      * Deletes a YouTube video
      *
@@ -126,7 +44,7 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (opts) {
-        return this._httpHandler(this.ngxYtdVideosApiUrl, opts, null, 'delete');
+        return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl, this.common.mergeOpts(opts), null, 'delete');
     };
     /**
      * Retrieves the ratings that the authorized user gave to a list of specified videos
@@ -150,7 +68,7 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (opts) {
-        return this._httpHandler(this.ngxYtdVideosApiUrl + "/getRating", opts, null, 'get');
+        return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl + "/getRating", this.common.mergeOpts(opts), null, 'get');
     };
     /**
      * Uploads a video to YouTube and optionally sets the video's metadata
@@ -177,7 +95,7 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (body, opts) {
-        return this._httpHandler(this.ngxYtdVideoUploadsApiUrl, opts, body, 'post');
+        return this.common.sendHttpRequest(this.ngxYtdVideoUploadsApiUrl, this.common.mergeOpts(opts), body, 'post');
     };
     /**
      * Returns a list of videos that match the requested API parameters
@@ -201,7 +119,7 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (opts) {
-        return this._httpHandler(this.ngxYtdVideosApiUrl, opts, null, 'get');
+        return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl, this.common.mergeOpts(opts), null, 'get');
     };
     /**
      * Add a like or dislike rating to a video or remove a rating from a video
@@ -225,7 +143,7 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (opts) {
-        return this._httpHandler(this.ngxYtdVideosApiUrl + "/rate", opts, null, 'post');
+        return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl + "/rate", this.common.mergeOpts(opts), null, 'post');
     };
     /**
      * Reports a video for having abusive content
@@ -252,7 +170,7 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (body, opts) {
-        return this._httpHandler(this.ngxYtdVideosApiUrl + "/reportAbuse", opts, body, 'post');
+        return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl + "/reportAbuse", this.common.mergeOpts(opts), body, 'post');
     };
     /**
      * Updates a video's metadata
@@ -279,18 +197,15 @@ var NgxYtdApiVideosService = /** @class */ (function () {
      * @return {?} An observable of the HTTP request
      */
     function (body, opts) {
-        return this._httpHandler(this.ngxYtdVideosApiUrl, opts, body, 'put');
+        return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl, this.common.mergeOpts(opts), body, 'put');
     };
     NgxYtdApiVideosService.decorators = [
-        { type: Injectable, args: [{
-                    providedIn: 'root'
-                },] }
+        { type: Injectable }
     ];
     /** @nocollapse */
     NgxYtdApiVideosService.ctorParameters = function () { return [
-        { type: SimpleHttpService }
+        { type: NgxYtdApiCommonService }
     ]; };
-    /** @nocollapse */ NgxYtdApiVideosService.ngInjectableDef = defineInjectable({ factory: function NgxYtdApiVideosService_Factory() { return new NgxYtdApiVideosService(inject(SimpleHttpService)); }, token: NgxYtdApiVideosService, providedIn: "root" });
     return NgxYtdApiVideosService;
 }());
 
@@ -304,7 +219,7 @@ var NgxYtdApiVideosModule = /** @class */ (function () {
     NgxYtdApiVideosModule.decorators = [
         { type: NgModule, args: [{
                     imports: [
-                        SimpleHttpModule
+                        NgxYtdApiCommonModule
                     ],
                     providers: [
                         NgxYtdApiVideosService

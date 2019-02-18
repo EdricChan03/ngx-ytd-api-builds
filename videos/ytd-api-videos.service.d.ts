@@ -1,9 +1,9 @@
-import { SimpleHttpService } from 'ngx-simple-http';
+import { NgxYtdApiCommonService } from 'ngx-ytd-api/common';
 import { Observable } from 'rxjs';
 import { NgxYtdApiVideosDeleteOpts, NgxYtdApiVideosGetRatingOpts, NgxYtdApiVideosGetRatingResult, NgxYtdApiVideosInsertOpts, NgxYtdApiVideosListOpts, NgxYtdApiVideosListResult, NgxYtdApiVideosRateOpts, NgxYtdApiVideosReportAbuseBody, NgxYtdApiVideosReportAbuseOpts, NgxYtdApiVideosResource, NgxYtdApiVideosUpdateOpts } from './ytd-api-videos.interface';
 export declare class NgxYtdApiVideosService {
-    private http;
-    constructor(http: SimpleHttpService);
+    private common;
+    constructor(common: NgxYtdApiCommonService);
     /**
      * The API URL for the Videos API of the YouTube Data v3 API
      */
@@ -12,7 +12,6 @@ export declare class NgxYtdApiVideosService {
      * The API URL for the Videos API for uploading a video of the YouTube Data v3 API
      */
     readonly ngxYtdVideoUploadsApiUrl = "https://www.googleapis.com/upload/youtube/v3/videos";
-    private _httpHandler;
     /**
      * Deletes a YouTube video
      *

@@ -1,6 +1,5 @@
-import { Injectable, NgModule, defineInjectable, inject } from '@angular/core';
-import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
-import { HttpHeaders } from '@angular/common/http';
+import { Injectable, NgModule } from '@angular/core';
+import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
 /**
  * @fileoverview added by tsickle
@@ -13,82 +12,14 @@ import { HttpHeaders } from '@angular/common/http';
  */
 class NgxYtdApiCommentsService {
     /**
-     * @param {?} http
+     * @param {?} common
      */
-    constructor(http) {
-        this.http = http;
+    constructor(common) {
+        this.common = common;
         /**
          * The API URL for the Comments API of the YouTube Data v3 API
          */
         this.ngxYtdCommentsApiUrl = 'https://www.googleapis.com/youtube/v3/comments';
-    }
-    // Handler for HTTP requests
-    /**
-     * @private
-     * @template B, P, R
-     * @param {?} apiEndpoint
-     * @param {?} opts
-     * @param {?=} body
-     * @param {?=} httpType
-     * @return {?}
-     */
-    _httpHandler(apiEndpoint, opts, body = null, httpType) {
-        /** @type {?} */
-        let headers;
-        if ('accessToken' in opts && typeof opts['accessToken'] !== undefined && opts['accessToken'] !== null) {
-            headers = new HttpHeaders()
-                .set('Authorization', `Bearer ${opts['accessToken']}`);
-        }
-        switch (httpType) {
-            case 'delete':
-                if (headers) {
-                    return this.http.createHttpDelete(apiEndpoint, opts, headers);
-                }
-                else {
-                    return this.http.createHttpDelete(apiEndpoint, opts);
-                }
-            case 'get':
-                if (headers) {
-                    return this.http.createHttpGet(apiEndpoint, opts, headers);
-                }
-                else {
-                    return this.http.createHttpGet(apiEndpoint, opts);
-                }
-            case 'post':
-                if (headers) {
-                    if (body) {
-                        return this.http.createHttpPost(apiEndpoint, opts, body, headers);
-                    }
-                    else {
-                        return this.http.createHttpPost(apiEndpoint, opts, null, headers);
-                    }
-                }
-                else {
-                    if (body) {
-                        return this.http.createHttpPost(apiEndpoint, opts, body);
-                    }
-                    else {
-                        return this.http.createHttpPost(apiEndpoint, opts, null);
-                    }
-                }
-            case 'put':
-                if (headers) {
-                    if (body) {
-                        return this.http.createHttpPut(apiEndpoint, opts, body, headers);
-                    }
-                    else {
-                        return this.http.createHttpPut(apiEndpoint, opts, null, headers);
-                    }
-                }
-                else {
-                    if (body) {
-                        return this.http.createHttpPut(apiEndpoint, opts, body);
-                    }
-                    else {
-                        return this.http.createHttpPut(apiEndpoint, opts, null);
-                    }
-                }
-        }
     }
     /**
      * Deletes a comment
@@ -98,7 +29,7 @@ class NgxYtdApiCommentsService {
      * @return {?} Results of the deletion as an `Observable`
      */
     delete(opts) {
-        return this._httpHandler(this.ngxYtdCommentsApiUrl, opts, null, 'delete');
+        return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), null, 'delete');
     }
     /**
      * Creates a reply to an existing comment
@@ -109,7 +40,7 @@ class NgxYtdApiCommentsService {
      * @return {?} Results of the creation as an `Observable`
      */
     insert(body, opts) {
-        return this._httpHandler(this.ngxYtdCommentsApiUrl, opts, body, 'post');
+        return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), body, 'post');
     }
     /**
      * Retrieves comments
@@ -119,7 +50,7 @@ class NgxYtdApiCommentsService {
      * @return {?} Results of the request as an `Observable`
      */
     list(opts) {
-        return this._httpHandler(this.ngxYtdCommentsApiUrl, opts, null, 'get');
+        return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), null, 'get');
     }
     /**
      * Flags one or more comments as spam
@@ -129,7 +60,7 @@ class NgxYtdApiCommentsService {
      * @return {?} Results of the request as an `Observable`
      */
     markAsSpam(opts) {
-        return this._httpHandler(`${this.ngxYtdCommentsApiUrl}/markAsSpam`, opts, null, 'post');
+        return this.common.sendHttpRequest(`${this.ngxYtdCommentsApiUrl}/markAsSpam`, this.common.mergeOpts(opts), null, 'post');
     }
     /**
      * Sets the moderation status of one or more comments
@@ -139,7 +70,7 @@ class NgxYtdApiCommentsService {
      * @return {?} Results of the request as an `Observable`
      */
     setModerationStatus(opts) {
-        return this._httpHandler(`${this.ngxYtdCommentsApiUrl}/setModerationStatus`, opts, null, 'post');
+        return this.common.sendHttpRequest(`${this.ngxYtdCommentsApiUrl}/setModerationStatus`, this.common.mergeOpts(opts), null, 'post');
     }
     /**
      * Modifies a comment
@@ -150,19 +81,16 @@ class NgxYtdApiCommentsService {
      * @return {?} Results of the update as an `Observable`
      */
     update(body, opts) {
-        return this._httpHandler(this.ngxYtdCommentsApiUrl, opts, body, 'put');
+        return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), body, 'put');
     }
 }
 NgxYtdApiCommentsService.decorators = [
-    { type: Injectable, args: [{
-                providedIn: 'root'
-            },] }
+    { type: Injectable }
 ];
 /** @nocollapse */
 NgxYtdApiCommentsService.ctorParameters = () => [
-    { type: SimpleHttpService }
+    { type: NgxYtdApiCommonService }
 ];
-/** @nocollapse */ NgxYtdApiCommentsService.ngInjectableDef = defineInjectable({ factory: function NgxYtdApiCommentsService_Factory() { return new NgxYtdApiCommentsService(inject(SimpleHttpService)); }, token: NgxYtdApiCommentsService, providedIn: "root" });
 
 /**
  * @fileoverview added by tsickle
@@ -173,7 +101,7 @@ class NgxYtdApiCommentsModule {
 NgxYtdApiCommentsModule.decorators = [
     { type: NgModule, args: [{
                 imports: [
-                    SimpleHttpModule
+                    NgxYtdApiCommonModule
                 ],
                 providers: [
                     NgxYtdApiCommentsService

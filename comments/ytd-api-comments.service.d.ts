@@ -1,14 +1,13 @@
-import { SimpleHttpService } from 'ngx-simple-http';
+import { NgxYtdApiCommonService } from 'ngx-ytd-api/common';
 import { Observable } from 'rxjs';
 import { NgxYtdApiCommentsDeleteOpts, NgxYtdApiCommentsInsertOpts, NgxYtdApiCommentsListOpts, NgxYtdApiCommentsListResult, NgxYtdApiCommentsMarkAsSpamOpts, NgxYtdApiCommentsResource, NgxYtdApiCommentsSetModerationStatusOpts, NgxYtdApiCommentsUpdateOpts } from './ytd-api-comments.interface';
 export declare class NgxYtdApiCommentsService {
-    private http;
-    constructor(http: SimpleHttpService);
+    private common;
+    constructor(common: NgxYtdApiCommonService);
     /**
      * The API URL for the Comments API of the YouTube Data v3 API
      */
     readonly ngxYtdCommentsApiUrl = "https://www.googleapis.com/youtube/v3/comments";
-    private _httpHandler;
     /**
      * Deletes a comment
      *
