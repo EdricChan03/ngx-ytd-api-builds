@@ -28,7 +28,7 @@ Also ensure that your app is running at least Angular 6 before continuing.
 
 ### Installing
 
-Run the following comamnd which should install the `latest` version (`1.0.0-alpha.4-41f581b`):
+Run the following comamnd which should install the `latest` version (`1.0.0-alpha.4-6f4b948`):
 
 ```bash
 npm install ngx-ytd-api --save

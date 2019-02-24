@@ -7,10 +7,16 @@ import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
- * Injection token that can be used to specify the APi's standard options.
+ * Injection token that can be used to specify the standard query parameters for all API endpoints.
  * @type {?}
  */
-const NGX_YTD_API_DEFAULT_STANDARD_OPTIONS = new InjectionToken('ngx-ytd-api-default-standard-opts');
+const NGX_YTD_API_DEFAULT_STANDARD_PARAMS = new InjectionToken('ngx-ytd-api-default-standard-params');
+/**
+ * Injection token that can be used to specify the standard query parameters for all API endpoints.
+ * @deprecated Use {\@link NGX_YTD_API_DEFAULT_STANDARD_PARAMS}
+ * @type {?}
+ */
+const NGX_YTD_API_DEFAULT_STANDARD_OPTIONS = NGX_YTD_API_DEFAULT_STANDARD_PARAMS;
 
 /**
  * @fileoverview added by tsickle
@@ -31,13 +37,37 @@ class NgxYtdApiCommonService {
         this.defaultOptions = defaultOptions;
     }
     /**
+     * Checks for the following:
+     * 1. The `key` exists in `obj`
+     * 2. The key-value of `key` in `obj` is not `null`
+     * @private
+     * @template O
+     * @param {?} obj The object to check
+     * @param {?} key The key to check for in `obj`
+     * @return {?} `true` if all conditions are met, `false` otherwise
+     */
+    keyValueExistsAndNonNull(obj, key) {
+        return key in obj && typeof obj[key] !== null;
+    }
+    /**
      * Merges an API request's options with the default standard options as
      * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
+     * @deprecated Use {\@link NgxYtdApiCommonService#mergeParamsWithStandardParams}
      * @template T
      * @param {?} opts The API request's options
      * @return {?} The merged API request's options
      */
     mergeOpts(opts) {
+        return this.mergeParamsWithStandardParams(opts);
+    }
+    /**
+     * Merges an API request's parameters with the default standard parameters as
+     * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
+     * @template T
+     * @param {?} opts The API request's options
+     * @return {?} The merged API request's options
+     */
+    mergeParamsWithStandardParams(opts) {
         if (this.defaultOptions) {
             return Object.assign({}, opts, this.defaultOptions);
         }
@@ -57,9 +87,19 @@ class NgxYtdApiCommonService {
     sendHttpRequest(apiEndpoint, opts, body = null, httpType) {
         /** @type {?} */
         let headers;
-        if ('accessToken' in opts && typeof opts['accessToken'] !== undefined && opts['accessToken'] !== null) {
-            headers = new HttpHeaders()
-                .set('Authorization', `Bearer ${opts['accessToken']}`);
+        if (this.keyValueExistsAndNonNull(opts, 'accessToken')) {
+            if (this.keyValueExistsAndNonNull(opts, 'accessTokenUsesParam') && opts['accessTokenUsesParam']) {
+                // Using parameter
+                opts['access_token'] = opts['accessToken'];
+                delete opts['accessToken'];
+                // We don't want to pass this to the actual API endpoint
+                delete opts['accessTokenUsesParam'];
+            }
+            else {
+                // Using HTTP headers
+                headers = new HttpHeaders()
+                    .set('Authorization', `Bearer ${opts['accessToken']}`);
+            }
         }
         switch (httpType) {
             case 'delete':
@@ -149,6 +189,6 @@ NgxYtdApiCommonModule.decorators = [
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NgxYtdApiCommonModule, NgxYtdApiCommonService };
+export { NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NgxYtdApiCommonModule, NgxYtdApiCommonService };
 
 //# sourceMappingURL=ngx-ytd-api-common.js.map

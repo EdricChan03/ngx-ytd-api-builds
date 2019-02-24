@@ -9,7 +9,7 @@
 	 * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
 	 */
 	/** @type {?} */
-	var VERSION = new core.Version('1.0.0-alpha.4-41f581b-41f581b');
+	var VERSION = new core.Version('1.0.0-alpha.4-6f4b948-6f4b948');
 
 	/**
 	 * @fileoverview added by tsickle
@@ -23,6 +23,7 @@
 
 	exports.NgxYtdApiCommentsModule = comments.NgxYtdApiCommentsModule;
 	exports.NgxYtdApiCommentsService = comments.NgxYtdApiCommentsService;
+	exports.NGX_YTD_API_DEFAULT_STANDARD_PARAMS = common.NGX_YTD_API_DEFAULT_STANDARD_PARAMS;
 	exports.NGX_YTD_API_DEFAULT_STANDARD_OPTIONS = common.NGX_YTD_API_DEFAULT_STANDARD_OPTIONS;
 	exports.NgxYtdApiCommonModule = common.NgxYtdApiCommonModule;
 	exports.NgxYtdApiCommonService = common.NgxYtdApiCommonService;
