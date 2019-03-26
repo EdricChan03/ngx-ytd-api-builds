@@ -9,7 +9,7 @@ import { Version } from '@angular/core';
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const VERSION = new Version('1.0.0-alpha.4-8c2af72-8c2af72');
+const VERSION = new Version('1.0.0-alpha.4-58f6e55-58f6e55');
 
 /**
  * @fileoverview added by tsickle
