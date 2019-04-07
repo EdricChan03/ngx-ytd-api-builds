@@ -9,7 +9,7 @@
 	 * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
 	 */
 	/** @type {?} */
-	var VERSION = new core.Version('1.0.0-alpha.4-ad8722c-ad8722c');
+	var VERSION = new core.Version('1.0.0-alpha.4-53c3c4c-53c3c4c');
 
 	/**
 	 * @fileoverview added by tsickle
