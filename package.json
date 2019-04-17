@@ -1,7 +1,7 @@
 {
   "name": "ngx-ytd-api",
   "description": "Unofficial YouTube Data API for Angular",
-  "version": "1.0.0-alpha.4-ac639a0",
+  "version": "1.0.0-alpha.4-85a31a9",
   "license": "MIT",
   "keywords": [
     "youtube",
