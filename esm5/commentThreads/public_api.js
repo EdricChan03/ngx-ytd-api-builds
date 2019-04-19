@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+export {} from './ytd-api-comment-threads.interface';
+export { NgxYtdApiCommentThreadsModule } from './ytd-api-comment-threads.module';
+export { NgxYtdApiCommentThreadsService } from './ytd-api-comment-threads.service';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljX2FwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC15dGQtYXBpL2NvbW1lbnRUaHJlYWRzLyIsInNvdXJjZXMiOlsicHVibGljX2FwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsZUFBYyxxQ0FBcUMsQ0FBQztBQUNwRCw4Q0FBYyxrQ0FBa0MsQ0FBQztBQUNqRCwrQ0FBYyxtQ0FBbUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4veXRkLWFwaS1jb21tZW50LXRocmVhZHMuaW50ZXJmYWNlJztcbmV4cG9ydCAqIGZyb20gJy4veXRkLWFwaS1jb21tZW50LXRocmVhZHMubW9kdWxlJztcbmV4cG9ydCAqIGZyb20gJy4veXRkLWFwaS1jb21tZW50LXRocmVhZHMuc2VydmljZSc7XG4iXX0=

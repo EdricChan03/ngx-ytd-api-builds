@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/ngx-ytd-api-commentThreads.umd.js",
+  "module": "../fesm5/ngx-ytd-api-commentThreads.js",
+  "es2015": "../fesm2015/ngx-ytd-api-commentThreads.js",
+  "esm5": "../esm5/commentThreads/ngx-ytd-api-commentThreads.js",
+  "esm2015": "../esm2015/commentThreads/ngx-ytd-api-commentThreads.js",
+  "fesm5": "../fesm5/ngx-ytd-api-commentThreads.js",
+  "fesm2015": "../fesm2015/ngx-ytd-api-commentThreads.js",
+  "typings": "ngx-ytd-api-commentThreads.d.ts",
+  "metadata": "ngx-ytd-api-commentThreads.metadata.json",
+  "sideEffects": false,
+  "name": "ngx-ytd-api/commentThreads"
+}

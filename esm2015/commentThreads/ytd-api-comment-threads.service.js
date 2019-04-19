@@ -1,0 +1,62 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { Injectable } from '@angular/core';
+import { NgxYtdApiCommonService } from 'ngx-ytd-api/common';
+export class NgxYtdApiCommentThreadsService {
+    /**
+     * @param {?} common
+     */
+    constructor(common) {
+        this.common = common;
+        this.ngxYtdApiCommentThreadsApiUrl = 'https://www.googleapis.com/youtube/v3/commentThreads';
+    }
+    /**
+     * Returns a list of comment threads that match the API request parameters
+     * @see [CommentThreads: list](https://developers.google.com/youtube/v3/docs/commentThreads/list) / [Parameters table](https://developers.google.com/youtube/v3/docs/commentThreads/list#parameters) / [Response body](https://developers.google.com/youtube/v3/docs/commentThreads/list#response) / [Examples](https://developers.google.com/youtube/v3/docs/commentThreads/list#examples)
+     * @param {?} params Query parameters to be appended to the API endpoint
+     * @return {?} Results of the list as an `Observable`
+     */
+    list(params) {
+        return this.common.sendHttpRequest(this.ngxYtdApiCommentThreadsApiUrl, this.common.mergeParamsWithStandardParams(params), null, 'get');
+    }
+    /**
+     * Creates a new top-level comment
+     * @see [CommentThreads: insert](https://developers.google.com/youtube/v3/docs/commentThreads/insert) / [Parameters table](https://developers.google.com/youtube/v3/docs/commentThreads/insert#parameters) / [Response body](https://developers.google.com/youtube/v3/docs/commentThreads/insert#response) / [Request body](https://developers.google.com/youtube/v3/docs/commentThreads/insert#request-body) / [API Explorer demo](https://developers.google.com/youtube/v3/docs/commentThreads/insert?apix=true)
+     * @param {?} body The top-level comment to create
+     * (See [request body](https://developers.google.com/youtube/v3/docs/commentThreads/insert#request-body) for more info)
+     * @param {?} params Parameters for the API
+     * @return {?} The created comment thread
+     */
+    insert(body, params) {
+        return this.common.sendHttpRequest(this.ngxYtdApiCommentThreadsApiUrl, this.common.mergeParamsWithStandardParams(params), body, 'post');
+    }
+    /**
+     * Modifies the top-level comment in a comment thread
+     * @see [CommentThreads: update](https://developers.google.com/youtube/v3/docs/commentThreads/update) / [Parameters table](https://developers.google.com/youtube/v3/docs/commentThreads/update#parameters) / [Response body](https://developers.google.com/youtube/v3/docs/commentThreads/update#response) / [Request body](https://developers.google.com/youtube/v3/docs/commentThreads/update#request-body) / [API Explorer demo](https://developers.google.com/youtube/v3/docs/commentThreads/update?apix=true)
+     * @param {?} body A modified version of the top-level comment
+     * @param {?} params Parameters for the API
+     * @return {?} The updated top-level comment
+     */
+    update(body, params) {
+        return this.common.sendHttpRequest(this.ngxYtdApiCommentThreadsApiUrl, this.common.mergeParamsWithStandardParams(params), body, 'put');
+    }
+}
+NgxYtdApiCommentThreadsService.decorators = [
+    { type: Injectable }
+];
+/** @nocollapse */
+NgxYtdApiCommentThreadsService.ctorParameters = () => [
+    { type: NgxYtdApiCommonService }
+];
+if (false) {
+    /** @type {?} */
+    NgxYtdApiCommentThreadsService.prototype.ngxYtdApiCommentThreadsApiUrl;
+    /**
+     * @type {?}
+     * @private
+     */
+    NgxYtdApiCommentThreadsService.prototype.common;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoieXRkLWFwaS1jb21tZW50LXRocmVhZHMuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC15dGQtYXBpL2NvbW1lbnRUaHJlYWRzLyIsInNvdXJjZXMiOlsieXRkLWFwaS1jb21tZW50LXRocmVhZHMuc2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLFVBQVUsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUMzQyxPQUFPLEVBQUUsc0JBQXNCLEVBQUUsTUFBTSxvQkFBb0IsQ0FBQztBQVc1RCxNQUFNLE9BQU8sOEJBQThCOzs7O0lBQ3pDLFlBQW9CLE1BQThCO1FBQTlCLFdBQU0sR0FBTixNQUFNLENBQXdCO1FBRXpDLGtDQUE2QixHQUFHLHNEQUFzRCxDQUFDO0lBRjFDLENBQUM7Ozs7Ozs7SUFZdkQsSUFBSSxDQUFDLE1BQXlDO1FBQzVDLE9BQU8sSUFBSSxDQUFDLE1BQU0sQ0FBQyxlQUFlLENBQ2hDLElBQUksQ0FBQyw2QkFBNkIsRUFDbEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyw2QkFBNkIsQ0FBb0MsTUFBTSxDQUFDLEVBQ3BGLElBQUksRUFDSixLQUFLLENBQ04sQ0FBQztJQUNKLENBQUM7Ozs7Ozs7OztJQWNELE1BQU0sQ0FBQyxJQUFxQyxFQUFFLE1BQTJDO1FBQ3ZGLE9BQU8sSUFBSSxDQUFDLE1BQU0sQ0FBQyxlQUFlLENBSWhDLElBQUksQ0FBQyw2QkFBNkIsRUFDbEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyw2QkFBNkIsQ0FBc0MsTUFBTSxDQUFDLEVBQ3RGLElBQUksRUFDSixNQUFNLENBQ0wsQ0FBQztJQUNKLENBQUM7Ozs7Ozs7O0lBYUgsTUFBTSxDQUFDLElBQXFDLEVBQUUsTUFBMkM7UUFDdkYsT0FBTyxJQUFJLENBQUMsTUFBTSxDQUFDLGVBQWUsQ0FLaEMsSUFBSSxDQUFDLDZCQUE2QixFQUNsQyxJQUFJLENBQUMsTUFBTSxDQUFDLDZCQUE2QixDQUFDLE1BQU0sQ0FBQyxFQUNqRCxJQUFJLEVBQ0osS0FBSyxDQUNOLENBQUM7SUFDSixDQUFDOzs7WUFyRUYsVUFBVTs7OztZQVZGLHNCQUFzQjs7OztJQWM3Qix1RUFBZ0c7Ozs7O0lBRnBGLGdEQUFzQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEluamVjdGFibGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IE5neFl0ZEFwaUNvbW1vblNlcnZpY2UgfSBmcm9tICduZ3gteXRkLWFwaS9jb21tb24nO1xuaW1wb3J0IHsgT2JzZXJ2YWJsZSB9IGZyb20gJ3J4anMnO1xuaW1wb3J0IHtcbiAgTmd4WXRkQXBpQ29tbWVudFRocmVhZHNJbnNlcnRQYXJhbXMsXG4gIE5neFl0ZEFwaUNvbW1lbnRUaHJlYWRzTGlzdFBhcmFtcyxcbiAgTmd4WXRkQXBpQ29tbWVudFRocmVhZHNMaXN0UmVzcG9uc2UsXG4gIE5neFl0ZEFwaUNvbW1lbnRUaHJlYWRzUmVzb3VyY2UsXG4gIE5neFl0ZEFwaUNvbW1lbnRUaHJlYWRzVXBkYXRlUGFyYW1zXG59IGZyb20gJy4veXRkLWFwaS1jb21tZW50LXRocmVhZHMuaW50ZXJmYWNlJztcblxuQEluamVjdGFibGUoKVxuZXhwb3J0IGNsYXNzIE5neFl0ZEFwaUNvbW1lbnRUaHJlYWRzU2VydmljZSB7XG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgY29tbW9uOiBOZ3hZdGRBcGlDb21tb25TZXJ2aWNlKSB7IH1cblxuICByZWFkb25seSBuZ3hZdGRBcGlDb21tZW50VGhyZWFkc0FwaVVybCA9ICdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS95b3V0dWJlL3YzL2NvbW1lbnRUaHJlYWRzJztcbiAgLyoqXG4gICAqIFJldHVybnMgYSBsaXN0IG9mIGNvbW1lbnQgdGhyZWFkcyB0aGF0IG1hdGNoIHRoZSBBUEkgcmVxdWVzdCBwYXJhbWV0ZXJzXG4gICAqIEBzZWUgW0NvbW1lbnRUaHJlYWRzOiBsaXN0XShodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3MvY29tbWVudFRocmVhZHMvbGlzdClcbiAgICogQHNlZSBbUGFyYW1ldGVycyB0YWJsZV0oaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9kb2NzL2NvbW1lbnRUaHJlYWRzL2xpc3QjcGFyYW1ldGVycylcbiAgICogQHNlZSBbUmVzcG9uc2UgYm9keV0oaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9kb2NzL2NvbW1lbnRUaHJlYWRzL2xpc3QjcmVzcG9uc2UpXG4gICAqIEBzZWUgW0V4YW1wbGVzXShodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3MvY29tbWVudFRocmVhZHMvbGlzdCNleGFtcGxlcylcbiAgICogQHBhcmFtIHBhcmFtcyBRdWVyeSBwYXJhbWV0ZXJzIHRvIGJlIGFwcGVuZGVkIHRvIHRoZSBBUEkgZW5kcG9pbnRcbiAgICogQHJldHVybnMgUmVzdWx0cyBvZiB0aGUgbGlzdCBhcyBhbiBgT2JzZXJ2YWJsZWBcbiAgICovXG4gIGxpc3QocGFyYW1zOiBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc0xpc3RQYXJhbXMpOiBPYnNlcnZhYmxlPE5neFl0ZEFwaUNvbW1lbnRUaHJlYWRzTGlzdFJlc3BvbnNlPiB7XG4gICAgcmV0dXJuIHRoaXMuY29tbW9uLnNlbmRIdHRwUmVxdWVzdDxudWxsLCBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc0xpc3RQYXJhbXMsIE5neFl0ZEFwaUNvbW1lbnRUaHJlYWRzTGlzdFJlc3BvbnNlPihcbiAgICAgIHRoaXMubmd4WXRkQXBpQ29tbWVudFRocmVhZHNBcGlVcmwsXG4gICAgICB0aGlzLmNvbW1vbi5tZXJnZVBhcmFtc1dpdGhTdGFuZGFyZFBhcmFtczxOZ3hZdGRBcGlDb21tZW50VGhyZWFkc0xpc3RQYXJhbXM+KHBhcmFtcyksXG4gICAgICBudWxsLFxuICAgICAgJ2dldCdcbiAgICApO1xuICB9XG5cbiAgLyoqXG4gICAqIENyZWF0ZXMgYSBuZXcgdG9wLWxldmVsIGNvbW1lbnRcbiAgICogQHNlZSBbQ29tbWVudFRocmVhZHM6IGluc2VydF0oaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9kb2NzL2NvbW1lbnRUaHJlYWRzL2luc2VydClcbiAgICogQHNlZSBbUGFyYW1ldGVycyB0YWJsZV0oaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9kb2NzL2NvbW1lbnRUaHJlYWRzL2luc2VydCNwYXJhbWV0ZXJzKVxuICAgKiBAc2VlIFtSZXNwb25zZSBib2R5XShodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3MvY29tbWVudFRocmVhZHMvaW5zZXJ0I3Jlc3BvbnNlKVxuICAgKiBAc2VlIFtSZXF1ZXN0IGJvZHldKGh0dHBzOi8vZGV2ZWxvcGVycy5nb29nbGUuY29tL3lvdXR1YmUvdjMvZG9jcy9jb21tZW50VGhyZWFkcy9pbnNlcnQjcmVxdWVzdC1ib2R5KVxuICAgKiBAc2VlIFtBUEkgRXhwbG9yZXIgZGVtb10oaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9kb2NzL2NvbW1lbnRUaHJlYWRzL2luc2VydD9hcGl4PXRydWUpXG4gICAqIEBwYXJhbSBib2R5IFRoZSB0b3AtbGV2ZWwgY29tbWVudCB0byBjcmVhdGVcbiAgICogKFNlZSBbcmVxdWVzdCBib2R5XShodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3MvY29tbWVudFRocmVhZHMvaW5zZXJ0I3JlcXVlc3QtYm9keSkgZm9yIG1vcmUgaW5mbylcbiAgICogQHBhcmFtIHBhcmFtcyBQYXJhbWV0ZXJzIGZvciB0aGUgQVBJXG4gICAqIEByZXR1cm5zIFRoZSBjcmVhdGVkIGNvbW1lbnQgdGhyZWFkXG4gICAqL1xuICBpbnNlcnQoYm9keTogTmd4WXRkQXBpQ29tbWVudFRocmVhZHNSZXNvdXJjZSwgcGFyYW1zOiBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc0luc2VydFBhcmFtcyk6IE9ic2VydmFibGU8Tmd4WXRkQXBpQ29tbWVudFRocmVhZHNSZXNvdXJjZT4ge1xuICAgIHJldHVybiB0aGlzLmNvbW1vbi5zZW5kSHR0cFJlcXVlc3Q8XG4gICAgTmd4WXRkQXBpQ29tbWVudFRocmVhZHNSZXNvdXJjZSxcbiAgICBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc0luc2VydFBhcmFtcyxcbiAgICBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc1Jlc291cmNlPihcbiAgICAgIHRoaXMubmd4WXRkQXBpQ29tbWVudFRocmVhZHNBcGlVcmwsXG4gICAgICB0aGlzLmNvbW1vbi5tZXJnZVBhcmFtc1dpdGhTdGFuZGFyZFBhcmFtczxOZ3hZdGRBcGlDb21tZW50VGhyZWFkc0luc2VydFBhcmFtcz4ocGFyYW1zKSxcbiAgICAgIGJvZHksXG4gICAgICAncG9zdCdcbiAgICAgICk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogTW9kaWZpZXMgdGhlIHRvcC1sZXZlbCBjb21tZW50IGluIGEgY29tbWVudCB0aHJlYWRcbiAgICAgKiBAc2VlIFtDb21tZW50VGhyZWFkczogdXBkYXRlXShodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3MvY29tbWVudFRocmVhZHMvdXBkYXRlKVxuICAgICAqIEBzZWUgW1BhcmFtZXRlcnMgdGFibGVdKGh0dHBzOi8vZGV2ZWxvcGVycy5nb29nbGUuY29tL3lvdXR1YmUvdjMvZG9jcy9jb21tZW50VGhyZWFkcy91cGRhdGUjcGFyYW1ldGVycylcbiAgICAgKiBAc2VlIFtSZXNwb25zZSBib2R5XShodHRwczovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS95b3V0dWJlL3YzL2RvY3MvY29tbWVudFRocmVhZHMvdXBkYXRlI3Jlc3BvbnNlKVxuICAgICAqIEBzZWUgW1JlcXVlc3QgYm9keV0oaHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20veW91dHViZS92My9kb2NzL2NvbW1lbnRUaHJlYWRzL3VwZGF0ZSNyZXF1ZXN0LWJvZHkpXG4gICAgICogQHNlZSBbQVBJIEV4cGxvcmVyIGRlbW9dKGh0dHBzOi8vZGV2ZWxvcGVycy5nb29nbGUuY29tL3lvdXR1YmUvdjMvZG9jcy9jb21tZW50VGhyZWFkcy91cGRhdGU/YXBpeD10cnVlKVxuICAgICAqIEBwYXJhbSBib2R5IEEgbW9kaWZpZWQgdmVyc2lvbiBvZiB0aGUgdG9wLWxldmVsIGNvbW1lbnRcbiAgICAgKiBAcGFyYW0gcGFyYW1zIFBhcmFtZXRlcnMgZm9yIHRoZSBBUElcbiAgICAgKiBAcmV0dXJucyBUaGUgdXBkYXRlZCB0b3AtbGV2ZWwgY29tbWVudFxuICAgICAqL1xuICB1cGRhdGUoYm9keTogTmd4WXRkQXBpQ29tbWVudFRocmVhZHNSZXNvdXJjZSwgcGFyYW1zOiBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc1VwZGF0ZVBhcmFtcyk6IE9ic2VydmFibGU8Tmd4WXRkQXBpQ29tbWVudFRocmVhZHNSZXNvdXJjZT4ge1xuICAgIHJldHVybiB0aGlzLmNvbW1vbi5zZW5kSHR0cFJlcXVlc3Q8XG4gICAgICBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc1Jlc291cmNlLFxuICAgICAgTmd4WXRkQXBpQ29tbWVudFRocmVhZHNVcGRhdGVQYXJhbXMsXG4gICAgICBOZ3hZdGRBcGlDb21tZW50VGhyZWFkc1Jlc291cmNlXG4gICAgPihcbiAgICAgIHRoaXMubmd4WXRkQXBpQ29tbWVudFRocmVhZHNBcGlVcmwsXG4gICAgICB0aGlzLmNvbW1vbi5tZXJnZVBhcmFtc1dpdGhTdGFuZGFyZFBhcmFtcyhwYXJhbXMpLFxuICAgICAgYm9keSxcbiAgICAgICdwdXQnXG4gICAgKTtcbiAgfVxufVxuIl19
