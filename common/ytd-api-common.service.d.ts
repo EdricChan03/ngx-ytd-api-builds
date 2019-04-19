@@ -23,7 +23,7 @@ export declare class NgxYtdApiCommonService {
      * @returns The merged API request's options
      * @deprecated Use {@link NgxYtdApiCommonService#mergeParamsWithStandardParams}
      */
-    mergeOpts<T extends any>(opts: T): T & NgxYtdApiStandardParams;
+    mergeOpts<T>(opts: T): T & NgxYtdApiStandardParams;
     /**
      * Merges an API request's parameters with the default standard parameters as
      * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
@@ -31,7 +31,7 @@ export declare class NgxYtdApiCommonService {
      * @template T A TypeScript interface to type `opts` against
      * @returns The merged API request's options
      */
-    mergeParamsWithStandardParams<T extends any>(opts: T): T & NgxYtdApiStandardParams;
+    mergeParamsWithStandardParams<T>(opts: T): T & NgxYtdApiStandardParams;
     /**
      * Sends a HTTP request to the specified `apiEndpoint`
      * @param apiEndpoint The API endpoint to send a HTTP request to
