@@ -1,33 +1,16 @@
-import { __assign } from 'tslib';
-import { HttpHeaders } from '@angular/common/http';
 import { InjectionToken, Injectable, Inject, Optional, NgModule } from '@angular/core';
+import { __assign, __decorate, __param, __metadata } from 'tslib';
+import { HttpHeaders } from '@angular/common/http';
 import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * Injection token that can be used to specify the standard query parameters for all API endpoints.
- * @type {?}
- */
+/** Injection token that can be used to specify the standard query parameters for all API endpoints. */
 var NGX_YTD_API_DEFAULT_STANDARD_PARAMS = new InjectionToken('ngx-ytd-api-default-standard-params');
 /**
  * Injection token that can be used to specify the standard query parameters for all API endpoints.
- * @deprecated Use {\@link NGX_YTD_API_DEFAULT_STANDARD_PARAMS}
- * @type {?}
+ * @deprecated Use {@link NGX_YTD_API_DEFAULT_STANDARD_PARAMS}
  */
 var NGX_YTD_API_DEFAULT_STANDARD_OPTIONS = NGX_YTD_API_DEFAULT_STANDARD_PARAMS;
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var NgxYtdApiCommonService = /** @class */ (function () {
     function NgxYtdApiCommonService(http, defaultOptions) {
         this.http = http;
@@ -42,27 +25,7 @@ var NgxYtdApiCommonService = /** @class */ (function () {
      * @template O The TypeScript interface to type `obj` against
      * @returns `true` if all conditions are met, `false` otherwise
      */
-    /**
-     * Checks for the following:
-     * 1. The `key` exists in `obj`
-     * 2. The key-value of `key` in `obj` is not `null`
-     * @private
-     * @template O
-     * @param {?} obj The object to check
-     * @param {?} key The key to check for in `obj`
-     * @return {?} `true` if all conditions are met, `false` otherwise
-     */
-    NgxYtdApiCommonService.prototype.keyValueExistsAndNonNull = /**
-     * Checks for the following:
-     * 1. The `key` exists in `obj`
-     * 2. The key-value of `key` in `obj` is not `null`
-     * @private
-     * @template O
-     * @param {?} obj The object to check
-     * @param {?} key The key to check for in `obj`
-     * @return {?} `true` if all conditions are met, `false` otherwise
-     */
-    function (obj, key) {
+    NgxYtdApiCommonService.prototype.keyValueExistsAndNonNull = function (obj, key) {
         return key in obj && typeof obj[key] !== null;
     };
     /**
@@ -73,23 +36,7 @@ var NgxYtdApiCommonService = /** @class */ (function () {
      * @returns The merged API request's options
      * @deprecated Use {@link NgxYtdApiCommonService#mergeParamsWithStandardParams}
      */
-    /**
-     * Merges an API request's options with the default standard options as
-     * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
-     * @deprecated Use {\@link NgxYtdApiCommonService#mergeParamsWithStandardParams}
-     * @template T
-     * @param {?} opts The API request's options
-     * @return {?} The merged API request's options
-     */
-    NgxYtdApiCommonService.prototype.mergeOpts = /**
-     * Merges an API request's options with the default standard options as
-     * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
-     * @deprecated Use {\@link NgxYtdApiCommonService#mergeParamsWithStandardParams}
-     * @template T
-     * @param {?} opts The API request's options
-     * @return {?} The merged API request's options
-     */
-    function (opts) {
+    NgxYtdApiCommonService.prototype.mergeOpts = function (opts) {
         return this.mergeParamsWithStandardParams(opts);
     };
     /**
@@ -99,21 +46,7 @@ var NgxYtdApiCommonService = /** @class */ (function () {
      * @template T A TypeScript interface to type `opts` against
      * @returns The merged API request's options
      */
-    /**
-     * Merges an API request's parameters with the default standard parameters as
-     * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
-     * @template T
-     * @param {?} opts The API request's options
-     * @return {?} The merged API request's options
-     */
-    NgxYtdApiCommonService.prototype.mergeParamsWithStandardParams = /**
-     * Merges an API request's parameters with the default standard parameters as
-     * specified via the `NGX_YTD_API_DEFAULT_STANDARD_OPTIONS` injection token
-     * @template T
-     * @param {?} opts The API request's options
-     * @return {?} The merged API request's options
-     */
-    function (opts) {
+    NgxYtdApiCommonService.prototype.mergeParamsWithStandardParams = function (opts) {
         if (this.defaultOptions) {
             return __assign({}, opts, this.defaultOptions);
         }
@@ -132,27 +65,8 @@ var NgxYtdApiCommonService = /** @class */ (function () {
      * @template R A TypeScript interface to type the HTTP request's result to
      * @returns The result of the HTTP request
      */
-    /**
-     * Sends a HTTP request to the specified `apiEndpoint`
-     * @template B, P, R
-     * @param {?} apiEndpoint The API endpoint to send a HTTP request to
-     * @param {?} opts Options to append to the endpoint as URL queries
-     * @param {?=} body The body of the HTTP request
-     * @param {?=} httpType The type of HTTP request to send
-     * @return {?} The result of the HTTP request
-     */
-    NgxYtdApiCommonService.prototype.sendHttpRequest = /**
-     * Sends a HTTP request to the specified `apiEndpoint`
-     * @template B, P, R
-     * @param {?} apiEndpoint The API endpoint to send a HTTP request to
-     * @param {?} opts Options to append to the endpoint as URL queries
-     * @param {?=} body The body of the HTTP request
-     * @param {?=} httpType The type of HTTP request to send
-     * @return {?} The result of the HTTP request
-     */
-    function (apiEndpoint, opts, body, httpType) {
+    NgxYtdApiCommonService.prototype.sendHttpRequest = function (apiEndpoint, opts, body, httpType) {
         if (body === void 0) { body = null; }
-        /** @type {?} */
         var headers;
         if (this.keyValueExistsAndNonNull(opts, 'accessToken')) {
             if (this.keyValueExistsAndNonNull(opts, 'accessTokenUsesParam') && opts['accessTokenUsesParam']) {
@@ -219,47 +133,33 @@ var NgxYtdApiCommonService = /** @class */ (function () {
                 }
         }
     };
-    NgxYtdApiCommonService.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    NgxYtdApiCommonService.ctorParameters = function () { return [
-        { type: SimpleHttpService },
-        { type: undefined, decorators: [{ type: Inject, args: [NGX_YTD_API_DEFAULT_STANDARD_OPTIONS,] }, { type: Optional }] }
-    ]; };
+    NgxYtdApiCommonService = __decorate([
+        Injectable(),
+        __param(1, Inject(NGX_YTD_API_DEFAULT_STANDARD_OPTIONS)), __param(1, Optional()),
+        __metadata("design:paramtypes", [SimpleHttpService, Object])
+    ], NgxYtdApiCommonService);
     return NgxYtdApiCommonService;
 }());
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var NgxYtdApiCommonModule = /** @class */ (function () {
     function NgxYtdApiCommonModule() {
     }
-    NgxYtdApiCommonModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        SimpleHttpModule
-                    ],
-                    providers: [
-                        NgxYtdApiCommonService
-                    ]
-                },] }
-    ];
+    NgxYtdApiCommonModule = __decorate([
+        NgModule({
+            imports: [
+                SimpleHttpModule
+            ],
+            providers: [
+                NgxYtdApiCommonService
+            ]
+        })
+    ], NgxYtdApiCommonModule);
     return NgxYtdApiCommonModule;
 }());
 
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-export { NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NgxYtdApiCommonModule, NgxYtdApiCommonService };
-
+export { NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NgxYtdApiCommonModule, NgxYtdApiCommonService };
 //# sourceMappingURL=ngx-ytd-api-common.js.map

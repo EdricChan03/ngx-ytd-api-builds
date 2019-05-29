@@ -1,19 +1,8 @@
+import { __decorate, __metadata } from 'tslib';
 import { Injectable, NgModule } from '@angular/core';
 import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class NgxYtdApiSearchService {
-    /**
-     * @param {?} common
-     */
+let NgxYtdApiSearchService = class NgxYtdApiSearchService {
     constructor(common) {
         this.common = common;
         /**
@@ -25,48 +14,34 @@ class NgxYtdApiSearchService {
      * Returns a collection of search results that match the query parameters specified
      *
      * See https://developers.google.com/youtube/v3/docs/search/list for more info
-     * @param {?} opts API parameters for the API
-     * @return {?} Results of the search has an `Observable`
+     * @param opts API parameters for the API
+     * @return Results of the search has an `Observable`
      */
     list(opts) {
         return this.common.sendHttpRequest(this.ngxYtdSearchApiUrl, this.common.mergeOpts(opts), null, 'get');
     }
-}
-NgxYtdApiSearchService.decorators = [
-    { type: Injectable }
-];
-/** @nocollapse */
-NgxYtdApiSearchService.ctorParameters = () => [
-    { type: NgxYtdApiCommonService }
-];
+};
+NgxYtdApiSearchService = __decorate([
+    Injectable(),
+    __metadata("design:paramtypes", [NgxYtdApiCommonService])
+], NgxYtdApiSearchService);
+
+let NgxYtdApiSearchModule = class NgxYtdApiSearchModule {
+};
+NgxYtdApiSearchModule = __decorate([
+    NgModule({
+        imports: [
+            NgxYtdApiCommonModule
+        ],
+        providers: [
+            NgxYtdApiSearchService
+        ]
+    })
+], NgxYtdApiSearchModule);
 
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class NgxYtdApiSearchModule {
-}
-NgxYtdApiSearchModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    NgxYtdApiCommonModule
-                ],
-                providers: [
-                    NgxYtdApiSearchService
-                ]
-            },] }
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
 
 export { NgxYtdApiSearchModule, NgxYtdApiSearchService };
-
 //# sourceMappingURL=ngx-ytd-api-search.js.map

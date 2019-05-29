@@ -1,26 +1,17 @@
-export { NgxYtdApiCommentsModule, NgxYtdApiCommentsService } from 'ngx-ytd-api/comments';
-export { NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NgxYtdApiCommonModule, NgxYtdApiCommonService } from 'ngx-ytd-api/common';
-export { NgxYtdApiSearchModule, NgxYtdApiSearchService } from 'ngx-ytd-api/search';
-export { NgxYtdApiVideosService, NgxYtdApiVideosModule } from 'ngx-ytd-api/videos';
+export * from 'ngx-ytd-api/comments';
+export { VERSION } from 'ngx-ytd-api/comments';
+export * from 'ngx-ytd-api/common';
+export * from 'ngx-ytd-api/search';
+export * from 'ngx-ytd-api/videos';
 import { Version } from '@angular/core';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
-const VERSION = new Version('1.0.0-alpha.4-18c0631-18c0631');
+const VERSION = new Version('1.0.0-alpha.4-f5b8908-f5b8908');
+
+// export * from './comments';
+// export * from './search';
+// export * from './videos';
 
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-export { VERSION };
-
 //# sourceMappingURL=ngx-ytd-api.js.map

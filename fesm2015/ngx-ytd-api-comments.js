@@ -1,19 +1,8 @@
+import { __decorate, __metadata } from 'tslib';
 import { Injectable, NgModule } from '@angular/core';
 import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class NgxYtdApiCommentsService {
-    /**
-     * @param {?} common
-     */
+let NgxYtdApiCommentsService = class NgxYtdApiCommentsService {
     constructor(common) {
         this.common = common;
         /**
@@ -25,8 +14,8 @@ class NgxYtdApiCommentsService {
      * Deletes a comment
      *
      * See https://developers.google.com/youtube/v3/docs/comments/delete for more info
-     * @param {?} opts Options for the API
-     * @return {?} Results of the deletion as an `Observable`
+     * @param opts Options for the API
+     * @return Results of the deletion as an `Observable`
      */
     delete(opts) {
         return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), null, 'delete');
@@ -35,9 +24,9 @@ class NgxYtdApiCommentsService {
      * Creates a reply to an existing comment
      *
      * See https://developers.google.com/youtube/v3/docs/comments/insert for more info
-     * @param {?} body The API body
-     * @param {?} opts Options for the API
-     * @return {?} Results of the creation as an `Observable`
+     * @param body The API body
+     * @param opts Options for the API
+     * @return Results of the creation as an `Observable`
      */
     insert(body, opts) {
         return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), body, 'post');
@@ -46,8 +35,8 @@ class NgxYtdApiCommentsService {
      * Retrieves comments
      *
      * See https://developers.google.com/youtube/v3/docs/comments/list for more info
-     * @param {?} opts Options for the API
-     * @return {?} Results of the request as an `Observable`
+     * @param opts Options for the API
+     * @return Results of the request as an `Observable`
      */
     list(opts) {
         return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), null, 'get');
@@ -56,8 +45,8 @@ class NgxYtdApiCommentsService {
      * Flags one or more comments as spam
      *
      * See https://developers.google.com/youtube/v3/docs/comments/markAsSpam for more info
-     * @param {?} opts Options for the API
-     * @return {?} Results of the request as an `Observable`
+     * @param opts Options for the API
+     * @return Results of the request as an `Observable`
      */
     markAsSpam(opts) {
         return this.common.sendHttpRequest(`${this.ngxYtdCommentsApiUrl}/markAsSpam`, this.common.mergeOpts(opts), null, 'post');
@@ -66,8 +55,8 @@ class NgxYtdApiCommentsService {
      * Sets the moderation status of one or more comments
      *
      * See https://developers.google.com/youtube/v3/docs/comments/setModerationStatus for more info
-     * @param {?} opts Options for the API
-     * @return {?} Results of the request as an `Observable`
+     * @param opts Options for the API
+     * @return Results of the request as an `Observable`
      */
     setModerationStatus(opts) {
         return this.common.sendHttpRequest(`${this.ngxYtdCommentsApiUrl}/setModerationStatus`, this.common.mergeOpts(opts), null, 'post');
@@ -76,49 +65,35 @@ class NgxYtdApiCommentsService {
      * Modifies a comment
      *
      * See https://developers.google.com/youtube/v3/docs/comments/update for more info
-     * @param {?} body The API body
-     * @param {?} opts Options for the API
-     * @return {?} Results of the update as an `Observable`
+     * @param body The API body
+     * @param opts Options for the API
+     * @return Results of the update as an `Observable`
      */
     update(body, opts) {
         return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), body, 'put');
     }
-}
-NgxYtdApiCommentsService.decorators = [
-    { type: Injectable }
-];
-/** @nocollapse */
-NgxYtdApiCommentsService.ctorParameters = () => [
-    { type: NgxYtdApiCommonService }
-];
+};
+NgxYtdApiCommentsService = __decorate([
+    Injectable(),
+    __metadata("design:paramtypes", [NgxYtdApiCommonService])
+], NgxYtdApiCommentsService);
+
+let NgxYtdApiCommentsModule = class NgxYtdApiCommentsModule {
+};
+NgxYtdApiCommentsModule = __decorate([
+    NgModule({
+        imports: [
+            NgxYtdApiCommonModule
+        ],
+        providers: [
+            NgxYtdApiCommentsService
+        ]
+    })
+], NgxYtdApiCommentsModule);
 
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class NgxYtdApiCommentsModule {
-}
-NgxYtdApiCommentsModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    NgxYtdApiCommonModule
-                ],
-                providers: [
-                    NgxYtdApiCommentsService
-                ]
-            },] }
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
 
 export { NgxYtdApiCommentsModule, NgxYtdApiCommentsService };
-
 //# sourceMappingURL=ngx-ytd-api-comments.js.map
