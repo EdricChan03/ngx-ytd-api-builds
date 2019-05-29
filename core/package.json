@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/ngx-ytd-api-core.umd.js",
+  "module": "../fesm5/ngx-ytd-api-core.js",
+  "es2015": "../fesm2015/ngx-ytd-api-core.js",
+  "esm5": "../esm5/core/ngx-ytd-api-core.js",
+  "esm2015": "../esm2015/core/ngx-ytd-api-core.js",
+  "fesm5": "../fesm5/ngx-ytd-api-core.js",
+  "fesm2015": "../fesm2015/ngx-ytd-api-core.js",
+  "typings": "ngx-ytd-api-core.d.ts",
+  "metadata": "ngx-ytd-api-core.metadata.json",
+  "sideEffects": false,
+  "name": "ngx-ytd-api/core"
+}
