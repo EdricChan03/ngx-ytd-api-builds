@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import * as typescript from 'typescript';
 import { WorkspaceProject } from '@angular-devkit/core/src/experimental/workspace';
 import { Tree } from '@angular-devkit/schematics';
 import { Schema as ComponentOptions } from '@schematics/angular/component/schema';
+import { typescript } from './version-agnostic-typescript';
 /** Reads file given path and returns TypeScript source file. */
 export declare function getSourceFile(host: Tree, path: string): typescript.SourceFile;
 /** Import and add module to root app module. */
