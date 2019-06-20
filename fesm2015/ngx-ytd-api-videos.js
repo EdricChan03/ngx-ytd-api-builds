@@ -106,9 +106,5 @@ NgxYtdApiVideosModule = __decorate([
     })
 ], NgxYtdApiVideosModule);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { NgxYtdApiVideosModule, NgxYtdApiVideosService };
 //# sourceMappingURL=ngx-ytd-api-videos.js.map

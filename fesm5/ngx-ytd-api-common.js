@@ -157,9 +157,5 @@ var NgxYtdApiCommonModule = /** @class */ (function () {
     return NgxYtdApiCommonModule;
 }());
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { NGX_YTD_API_DEFAULT_STANDARD_OPTIONS, NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NgxYtdApiCommonModule, NgxYtdApiCommonService };
 //# sourceMappingURL=ngx-ytd-api-common.js.map

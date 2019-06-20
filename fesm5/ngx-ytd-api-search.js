@@ -43,9 +43,5 @@ var NgxYtdApiSearchModule = /** @class */ (function () {
     return NgxYtdApiSearchModule;
 }());
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { NgxYtdApiSearchModule, NgxYtdApiSearchService };
 //# sourceMappingURL=ngx-ytd-api-search.js.map

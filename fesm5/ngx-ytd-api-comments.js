@@ -95,9 +95,5 @@ var NgxYtdApiCommentsModule = /** @class */ (function () {
     return NgxYtdApiCommentsModule;
 }());
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { NgxYtdApiCommentsModule, NgxYtdApiCommentsService };
 //# sourceMappingURL=ngx-ytd-api-comments.js.map

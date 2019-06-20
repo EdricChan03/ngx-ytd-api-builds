@@ -39,9 +39,5 @@ NgxYtdApiSearchModule = __decorate([
     })
 ], NgxYtdApiSearchModule);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { NgxYtdApiSearchModule, NgxYtdApiSearchService };
 //# sourceMappingURL=ngx-ytd-api-search.js.map

@@ -4,14 +4,6 @@
 	(global = global || self, factory(global['ngx-ytd-api'] = {}, global['ngx-ytd-api'].comments, global['ngx-ytd-api'].core, global['ngx-ytd-api'].common, global['ngx-ytd-api'].search, global['ngx-ytd-api'].videos));
 }(this, function (exports, comments, core, common, search, videos) { 'use strict';
 
-	// export * from './comments';
-	// export * from './search';
-	// export * from './videos';
-
-	/**
-	 * Generated bundle index. Do not edit.
-	 */
-
 	Object.keys(comments).forEach(function (key) {
 		Object.defineProperty(exports, key, {
 			enumerable: true,
