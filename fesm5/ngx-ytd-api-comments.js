@@ -1,6 +1,6 @@
 import { __decorate, __metadata } from 'tslib';
 import { Injectable, NgModule } from '@angular/core';
-import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
+import { NgxYtdApiCommonService, NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
 var NgxYtdApiCommentsService = /** @class */ (function () {
     function NgxYtdApiCommentsService(common) {
@@ -82,7 +82,22 @@ var NgxYtdApiCommentsService = /** @class */ (function () {
 var NgxYtdApiCommentsModule = /** @class */ (function () {
     function NgxYtdApiCommentsModule() {
     }
-    NgxYtdApiCommentsModule = __decorate([
+    NgxYtdApiCommentsModule_1 = NgxYtdApiCommentsModule;
+    /**
+     * Returns the module with the specified standard parameters
+     * @param defaultParams The default standard parameters
+     * @returns The module with the specified standard parameters
+     */
+    NgxYtdApiCommentsModule.forRoot = function (defaultParams) {
+        return {
+            ngModule: NgxYtdApiCommentsModule_1,
+            providers: [
+                { provide: NGX_YTD_API_DEFAULT_STANDARD_PARAMS, useValue: defaultParams }
+            ]
+        };
+    };
+    var NgxYtdApiCommentsModule_1;
+    NgxYtdApiCommentsModule = NgxYtdApiCommentsModule_1 = __decorate([
         NgModule({
             imports: [
                 NgxYtdApiCommonModule

@@ -1,6 +1,6 @@
 import { __decorate, __metadata } from 'tslib';
 import { Injectable, NgModule } from '@angular/core';
-import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
+import { NgxYtdApiCommonService, NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
 let NgxYtdApiSearchService = class NgxYtdApiSearchService {
     constructor(common) {
@@ -26,9 +26,23 @@ NgxYtdApiSearchService = __decorate([
     __metadata("design:paramtypes", [NgxYtdApiCommonService])
 ], NgxYtdApiSearchService);
 
-let NgxYtdApiSearchModule = class NgxYtdApiSearchModule {
+var NgxYtdApiSearchModule_1;
+let NgxYtdApiSearchModule = NgxYtdApiSearchModule_1 = class NgxYtdApiSearchModule {
+    /**
+     * Returns the module with the specified standard parameters
+     * @param defaultParams The default standard parameters
+     * @returns The module with the specified standard parameters
+     */
+    static forRoot(defaultParams) {
+        return {
+            ngModule: NgxYtdApiSearchModule_1,
+            providers: [
+                { provide: NGX_YTD_API_DEFAULT_STANDARD_PARAMS, useValue: defaultParams }
+            ]
+        };
+    }
 };
-NgxYtdApiSearchModule = __decorate([
+NgxYtdApiSearchModule = NgxYtdApiSearchModule_1 = __decorate([
     NgModule({
         imports: [
             NgxYtdApiCommonModule

@@ -58,7 +58,22 @@
     var NgxYtdApiSearchModule = /** @class */ (function () {
         function NgxYtdApiSearchModule() {
         }
-        NgxYtdApiSearchModule = __decorate([
+        NgxYtdApiSearchModule_1 = NgxYtdApiSearchModule;
+        /**
+         * Returns the module with the specified standard parameters
+         * @param defaultParams The default standard parameters
+         * @returns The module with the specified standard parameters
+         */
+        NgxYtdApiSearchModule.forRoot = function (defaultParams) {
+            return {
+                ngModule: NgxYtdApiSearchModule_1,
+                providers: [
+                    { provide: common.NGX_YTD_API_DEFAULT_STANDARD_PARAMS, useValue: defaultParams }
+                ]
+            };
+        };
+        var NgxYtdApiSearchModule_1;
+        NgxYtdApiSearchModule = NgxYtdApiSearchModule_1 = __decorate([
             core.NgModule({
                 imports: [
                     common.NgxYtdApiCommonModule

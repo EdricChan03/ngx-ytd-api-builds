@@ -86,7 +86,22 @@
     var NgxYtdApiCommentThreadsModule = /** @class */ (function () {
         function NgxYtdApiCommentThreadsModule() {
         }
-        NgxYtdApiCommentThreadsModule = __decorate([
+        NgxYtdApiCommentThreadsModule_1 = NgxYtdApiCommentThreadsModule;
+        /**
+         * Returns the module with the specified standard parameters
+         * @param defaultParams The default standard parameters
+         * @returns The module with the specified standard parameters
+         */
+        NgxYtdApiCommentThreadsModule.forRoot = function (defaultParams) {
+            return {
+                ngModule: NgxYtdApiCommentThreadsModule_1,
+                providers: [
+                    { provide: common.NGX_YTD_API_DEFAULT_STANDARD_PARAMS, useValue: defaultParams }
+                ]
+            };
+        };
+        var NgxYtdApiCommentThreadsModule_1;
+        NgxYtdApiCommentThreadsModule = NgxYtdApiCommentThreadsModule_1 = __decorate([
             core.NgModule({
                 providers: [
                     NgxYtdApiCommentThreadsService

@@ -1,6 +1,6 @@
 import { __decorate, __metadata } from 'tslib';
 import { Injectable, NgModule } from '@angular/core';
-import { NgxYtdApiCommonService, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
+import { NgxYtdApiCommonService, NGX_YTD_API_DEFAULT_STANDARD_PARAMS, NgxYtdApiCommonModule } from 'ngx-ytd-api/common';
 
 let NgxYtdApiCommentThreadsService = class NgxYtdApiCommentThreadsService {
     constructor(common) {
@@ -54,9 +54,23 @@ NgxYtdApiCommentThreadsService = __decorate([
     __metadata("design:paramtypes", [NgxYtdApiCommonService])
 ], NgxYtdApiCommentThreadsService);
 
-let NgxYtdApiCommentThreadsModule = class NgxYtdApiCommentThreadsModule {
+var NgxYtdApiCommentThreadsModule_1;
+let NgxYtdApiCommentThreadsModule = NgxYtdApiCommentThreadsModule_1 = class NgxYtdApiCommentThreadsModule {
+    /**
+     * Returns the module with the specified standard parameters
+     * @param defaultParams The default standard parameters
+     * @returns The module with the specified standard parameters
+     */
+    static forRoot(defaultParams) {
+        return {
+            ngModule: NgxYtdApiCommentThreadsModule_1,
+            providers: [
+                { provide: NGX_YTD_API_DEFAULT_STANDARD_PARAMS, useValue: defaultParams }
+            ]
+        };
+    }
 };
-NgxYtdApiCommentThreadsModule = __decorate([
+NgxYtdApiCommentThreadsModule = NgxYtdApiCommentThreadsModule_1 = __decorate([
     NgModule({
         providers: [
             NgxYtdApiCommentThreadsService

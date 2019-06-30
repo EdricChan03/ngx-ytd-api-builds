@@ -125,7 +125,22 @@
     var NgxYtdApiVideosModule = /** @class */ (function () {
         function NgxYtdApiVideosModule() {
         }
-        NgxYtdApiVideosModule = __decorate([
+        NgxYtdApiVideosModule_1 = NgxYtdApiVideosModule;
+        /**
+         * Returns the module with the specified standard parameters
+         * @param defaultParams The default standard parameters
+         * @returns The module with the specified standard parameters
+         */
+        NgxYtdApiVideosModule.forRoot = function (defaultParams) {
+            return {
+                ngModule: NgxYtdApiVideosModule_1,
+                providers: [
+                    { provide: common.NGX_YTD_API_DEFAULT_STANDARD_PARAMS, useValue: defaultParams }
+                ]
+            };
+        };
+        var NgxYtdApiVideosModule_1;
+        NgxYtdApiVideosModule = NgxYtdApiVideosModule_1 = __decorate([
             core.NgModule({
                 imports: [
                     common.NgxYtdApiCommonModule
