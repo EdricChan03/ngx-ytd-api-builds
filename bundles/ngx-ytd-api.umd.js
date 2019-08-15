@@ -4,43 +4,51 @@
 	(global = global || self, factory(global['ngx-ytd-api'] = {}, global['ngx-ytd-api'].comments, global['ngx-ytd-api'].core, global['ngx-ytd-api'].common, global['ngx-ytd-api'].search, global['ngx-ytd-api'].videos));
 }(this, function (exports, comments, core, common, search, videos) { 'use strict';
 
-	Object.keys(comments).forEach(function (key) {
-		Object.defineProperty(exports, key, {
+	// export * from './comments';
+	// export * from './search';
+	// export * from './videos';
+
+	/**
+	 * Generated bundle index. Do not edit.
+	 */
+
+	Object.keys(comments).forEach(function (k) {
+		if (k !== 'default') Object.defineProperty(exports, k, {
 			enumerable: true,
 			get: function () {
-				return comments[key];
+				return comments[k];
 			}
 		});
 	});
-	Object.keys(core).forEach(function (key) {
-		Object.defineProperty(exports, key, {
+	Object.keys(core).forEach(function (k) {
+		if (k !== 'default') Object.defineProperty(exports, k, {
 			enumerable: true,
 			get: function () {
-				return core[key];
+				return core[k];
 			}
 		});
 	});
-	Object.keys(common).forEach(function (key) {
-		Object.defineProperty(exports, key, {
+	Object.keys(common).forEach(function (k) {
+		if (k !== 'default') Object.defineProperty(exports, k, {
 			enumerable: true,
 			get: function () {
-				return common[key];
+				return common[k];
 			}
 		});
 	});
-	Object.keys(search).forEach(function (key) {
-		Object.defineProperty(exports, key, {
+	Object.keys(search).forEach(function (k) {
+		if (k !== 'default') Object.defineProperty(exports, k, {
 			enumerable: true,
 			get: function () {
-				return search[key];
+				return search[k];
 			}
 		});
 	});
-	Object.keys(videos).forEach(function (key) {
-		Object.defineProperty(exports, key, {
+	Object.keys(videos).forEach(function (k) {
+		if (k !== 'default') Object.defineProperty(exports, k, {
 			enumerable: true,
 			get: function () {
-				return videos[key];
+				return videos[k];
 			}
 		});
 	});

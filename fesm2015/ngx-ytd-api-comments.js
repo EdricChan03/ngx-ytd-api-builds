@@ -105,5 +105,9 @@ NgxYtdApiCommentsModule = NgxYtdApiCommentsModule_1 = __decorate([
     })
 ], NgxYtdApiCommentsModule);
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { NgxYtdApiCommentsModule, NgxYtdApiCommentsService };
 //# sourceMappingURL=ngx-ytd-api-comments.js.map

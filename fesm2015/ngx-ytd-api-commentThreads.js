@@ -81,5 +81,9 @@ NgxYtdApiCommentThreadsModule = NgxYtdApiCommentThreadsModule_1 = __decorate([
     })
 ], NgxYtdApiCommentThreadsModule);
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { NgxYtdApiCommentThreadsModule, NgxYtdApiCommentThreadsService };
 //# sourceMappingURL=ngx-ytd-api-commentThreads.js.map
