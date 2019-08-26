@@ -1,7 +1,7 @@
 import { Version } from '@angular/core';
 
 /** Version of ngx-ytd-api */
-const VERSION = new Version('1.0.0-alpha.4-bb6044e-bb6044e');
+const VERSION = new Version('1.0.0-alpha.4-8bda60b-8bda60b');
 
 /**
  * Generated bundle index. Do not edit.
