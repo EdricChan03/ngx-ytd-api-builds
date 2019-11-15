@@ -21,6 +21,9 @@ let NgxYtdApiSearchService = class NgxYtdApiSearchService {
         return this.common.sendHttpRequest(this.ngxYtdSearchApiUrl, this.common.mergeOpts(opts), null, 'get');
     }
 };
+NgxYtdApiSearchService.ctorParameters = () => [
+    { type: NgxYtdApiCommonService }
+];
 NgxYtdApiSearchService = __decorate([
     Injectable(),
     __metadata("design:paramtypes", [NgxYtdApiCommonService])

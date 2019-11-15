@@ -49,6 +49,9 @@ let NgxYtdApiCommentThreadsService = class NgxYtdApiCommentThreadsService {
         return this.common.sendHttpRequest(this.ngxYtdApiCommentThreadsApiUrl, this.common.mergeParamsWithStandardParams(params), body, 'put');
     }
 };
+NgxYtdApiCommentThreadsService.ctorParameters = () => [
+    { type: NgxYtdApiCommonService }
+];
 NgxYtdApiCommentThreadsService = __decorate([
     Injectable(),
     __metadata("design:paramtypes", [NgxYtdApiCommonService])

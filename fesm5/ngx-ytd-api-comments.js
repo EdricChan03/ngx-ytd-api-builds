@@ -72,6 +72,9 @@ var NgxYtdApiCommentsService = /** @class */ (function () {
     NgxYtdApiCommentsService.prototype.update = function (body, opts) {
         return this.common.sendHttpRequest(this.ngxYtdCommentsApiUrl, this.common.mergeOpts(opts), body, 'put');
     };
+    NgxYtdApiCommentsService.ctorParameters = function () { return [
+        { type: NgxYtdApiCommonService }
+    ]; };
     NgxYtdApiCommentsService = __decorate([
         Injectable(),
         __metadata("design:paramtypes", [NgxYtdApiCommonService])

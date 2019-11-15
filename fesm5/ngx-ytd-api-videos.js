@@ -87,6 +87,9 @@ var NgxYtdApiVideosService = /** @class */ (function () {
     NgxYtdApiVideosService.prototype.update = function (body, opts) {
         return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl, this.common.mergeOpts(opts), body, 'put');
     };
+    NgxYtdApiVideosService.ctorParameters = function () { return [
+        { type: NgxYtdApiCommonService }
+    ]; };
     NgxYtdApiVideosService = __decorate([
         Injectable(),
         __metadata("design:paramtypes", [NgxYtdApiCommonService])

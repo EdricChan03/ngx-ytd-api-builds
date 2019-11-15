@@ -20,6 +20,9 @@ var NgxYtdApiSearchService = /** @class */ (function () {
     NgxYtdApiSearchService.prototype.list = function (opts) {
         return this.common.sendHttpRequest(this.ngxYtdSearchApiUrl, this.common.mergeOpts(opts), null, 'get');
     };
+    NgxYtdApiSearchService.ctorParameters = function () { return [
+        { type: NgxYtdApiCommonService }
+    ]; };
     NgxYtdApiSearchService = __decorate([
         Injectable(),
         __metadata("design:paramtypes", [NgxYtdApiCommonService])

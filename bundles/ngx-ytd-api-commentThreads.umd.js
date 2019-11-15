@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('ngx-ytd-api/common')) :
     typeof define === 'function' && define.amd ? define('ngx-ytd-api/commentThreads', ['exports', '@angular/core', 'ngx-ytd-api/common'], factory) :
     (global = global || self, factory((global['ngx-ytd-api'] = global['ngx-ytd-api'] || {}, global['ngx-ytd-api'].commentThreads = {}), global.ng.core, global['ngx-ytd-api'].common));
-}(this, function (exports, core, common) { 'use strict';
+}(this, (function (exports, core, common) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -247,6 +247,9 @@
         NgxYtdApiCommentThreadsService.prototype.update = function (body, params) {
             return this.common.sendHttpRequest(this.ngxYtdApiCommentThreadsApiUrl, this.common.mergeParamsWithStandardParams(params), body, 'put');
         };
+        NgxYtdApiCommentThreadsService.ctorParameters = function () { return [
+            { type: common.NgxYtdApiCommonService }
+        ]; };
         NgxYtdApiCommentThreadsService = __decorate([
             core.Injectable(),
             __metadata("design:paramtypes", [common.NgxYtdApiCommonService])
@@ -290,5 +293,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=ngx-ytd-api-commentThreads.umd.js.map

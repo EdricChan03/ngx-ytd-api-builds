@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common/http'), require('ngx-simple-http')) :
     typeof define === 'function' && define.amd ? define('ngx-ytd-api/common', ['exports', '@angular/core', '@angular/common/http', 'ngx-simple-http'], factory) :
     (global = global || self, factory((global['ngx-ytd-api'] = global['ngx-ytd-api'] || {}, global['ngx-ytd-api'].common = {}), global.ng.core, global.ng.common.http, global.ngxSimpleHttp));
-}(this, function (exports, core, http, ngxSimpleHttp) { 'use strict';
+}(this, (function (exports, core, http, ngxSimpleHttp) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -331,6 +331,10 @@
                     }
             }
         };
+        NgxYtdApiCommonService.ctorParameters = function () { return [
+            { type: ngxSimpleHttp.SimpleHttpService },
+            { type: undefined, decorators: [{ type: core.Inject, args: [NGX_YTD_API_DEFAULT_STANDARD_OPTIONS,] }, { type: core.Optional }] }
+        ]; };
         NgxYtdApiCommonService = __decorate([
             core.Injectable(),
             __param(1, core.Inject(NGX_YTD_API_DEFAULT_STANDARD_OPTIONS)), __param(1, core.Optional()),
@@ -362,5 +366,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=ngx-ytd-api-common.umd.js.map

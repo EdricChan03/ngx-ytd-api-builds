@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('ngx-ytd-api/common')) :
     typeof define === 'function' && define.amd ? define('ngx-ytd-api/search', ['exports', '@angular/core', 'ngx-ytd-api/common'], factory) :
     (global = global || self, factory((global['ngx-ytd-api'] = global['ngx-ytd-api'] || {}, global['ngx-ytd-api'].search = {}), global.ng.core, global['ngx-ytd-api'].common));
-}(this, function (exports, core, common) { 'use strict';
+}(this, (function (exports, core, common) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -219,6 +219,9 @@
         NgxYtdApiSearchService.prototype.list = function (opts) {
             return this.common.sendHttpRequest(this.ngxYtdSearchApiUrl, this.common.mergeOpts(opts), null, 'get');
         };
+        NgxYtdApiSearchService.ctorParameters = function () { return [
+            { type: common.NgxYtdApiCommonService }
+        ]; };
         NgxYtdApiSearchService = __decorate([
             core.Injectable(),
             __metadata("design:paramtypes", [common.NgxYtdApiCommonService])
@@ -262,5 +265,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=ngx-ytd-api-search.umd.js.map

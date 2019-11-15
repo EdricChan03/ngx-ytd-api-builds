@@ -88,6 +88,9 @@ let NgxYtdApiVideosService = class NgxYtdApiVideosService {
         return this.common.sendHttpRequest(this.ngxYtdVideosApiUrl, this.common.mergeOpts(opts), body, 'put');
     }
 };
+NgxYtdApiVideosService.ctorParameters = () => [
+    { type: NgxYtdApiCommonService }
+];
 NgxYtdApiVideosService = __decorate([
     Injectable(),
     __metadata("design:paramtypes", [NgxYtdApiCommonService])

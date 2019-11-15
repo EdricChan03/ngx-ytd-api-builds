@@ -1,4 +1,4 @@
-import { InjectionToken, Injectable, Inject, Optional, NgModule } from '@angular/core';
+import { InjectionToken, Inject, Optional, Injectable, NgModule } from '@angular/core';
 import { __assign, __decorate, __param, __metadata } from 'tslib';
 import { HttpHeaders } from '@angular/common/http';
 import { SimpleHttpService, SimpleHttpModule } from 'ngx-simple-http';
@@ -133,6 +133,10 @@ var NgxYtdApiCommonService = /** @class */ (function () {
                 }
         }
     };
+    NgxYtdApiCommonService.ctorParameters = function () { return [
+        { type: SimpleHttpService },
+        { type: undefined, decorators: [{ type: Inject, args: [NGX_YTD_API_DEFAULT_STANDARD_OPTIONS,] }, { type: Optional }] }
+    ]; };
     NgxYtdApiCommonService = __decorate([
         Injectable(),
         __param(1, Inject(NGX_YTD_API_DEFAULT_STANDARD_OPTIONS)), __param(1, Optional()),
