@@ -5,7 +5,7 @@
 }(this, (function (exports, core) { 'use strict';
 
 	/** Version of ngx-ytd-api */
-	var VERSION = new core.Version('1.0.0-alpha.4-7b27959-7b27959');
+	var VERSION = new core.Version('1.0.0-alpha.4-c9f12bc-c9f12bc');
 
 	exports.VERSION = VERSION;
 
